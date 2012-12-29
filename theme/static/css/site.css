@@ -239,7 +239,9 @@ a.thumbnail:hover {
 }
 
 div.code {
-  margin: 15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
+    overflow: auto;
+    background-color: #2B2E23;
 }
 div.code pre, div.code table {
   margin: 0px;
@@ -254,10 +256,10 @@ div.code table {
 div.code td {
   padding: 0px;
 }
-div.code > div {
-  overflow: auto;
-  background-color: #2b2e23;
-}
+/* div.code > div { */
+/*   overflow: auto; */
+/*   background-color: #2b2e23; */
+/* } */
 div.code td.linenos pre {
   background-color: #3c4030;
 }
@@ -326,8 +328,11 @@ blockquote p {
   font-size: 40px;
 }
 #main h2 {
-  /* border-top: solid 1px #DDD; */
   padding-top: 15px;
+}
+#main .item h2 {
+    padding: 15px 0;
+    border-top: solid 1px #DDD;
 }
 #main p {
   margin: 20px 0;

@@ -1,28 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        {% include 'page.header.html' %}
-        {% if site.title %}
-        <title>
-            {% if title %}{{ title }} &ndash; {% endif %}{{ site.title }}
-            {% if not title and site.subtitle %} &ndash; {{ site.subtitle }}{% endif %}
-        </title>
-        {% endif %}
+        {% block head -%}
+        <title>{{ conf.sitename }}</title>
+        <link href='/static/css/site.css' rel="stylesheet" type="text/css">
+        <link href='/static/css/pygments.css' rel="stylesheet" type="text/css">
+        {%- endblock %}
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div id="sidebar-container">
                     <div id="sidebar" class="span3">
-                        <h1 id="site-title">{{ site.title|lower }}</h1>
+                        <h1 id="site-title">{{ conf.sitename|lower }}</h1>
                         <h2>Explore</h2>
                         <ul>
-                            <li><a href="{{ get_url() }}">Home</a></li>
-                            <li><a href="{{ get_url('archives/') }}">Archives</a></li>
-                            <li><a href="{{ get_url('about/') }}">About</a></li>
-                            {% if site.feed %}
-                                <li><a href="{{ get_url('feed.xml') }}">Feed</a></li>
-                            {% endif %}
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/archives">Archives</a></li>
+                            <li><a href="about/">About</a></li>
                         </ul>
                         <h2>Elsewhere</h2>
                         <ul>
@@ -33,7 +28,7 @@
                                 <a href="http://twitter.com/iromli" target="_blank">Twitter</a>
                             </li>
                         </ul>
-                        <p id="legal">{{ site.title }} &copy; 2012 <br/><a href="https://github.com/iromli/groovematic" target="_blank">Use the source, Luke!</a></p>
+                        <p id="legal">{{ conf.sitename }} &copy; 2012 <br/><a href="https://github.com/iromli/groovematic" target="_blank">Use the source, Luke!</a></p>
                     </div>
                 </div>
                 <div id="main" class="offset4 span12">

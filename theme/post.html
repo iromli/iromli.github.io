@@ -7,7 +7,7 @@
     <div class="item">
         <header>
             <h1>{{ post.title }}</h1>
-            <p><em>{{ post.date }}{% if post.tags %}</em> <span>&raquo;</span> {% for tag
+            <p><em>{{ post.date }}</em>{% if post.tags %}<span>&raquo;</span> {% for tag
                 in post.tags %}<a href="{{ get_url(tags[tag].url) }}">{{ tag
                     }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{%
                 endif %}</p>
