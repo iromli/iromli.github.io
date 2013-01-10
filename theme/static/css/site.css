@@ -252,6 +252,7 @@ div.code table, div.code td {
 div.code table {
   -webkit-box-shadow: none;
   box-shadow: none;
+  border-collapse: collapse;
 }
 div.code td {
   padding: 0px;

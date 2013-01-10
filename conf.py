@@ -10,12 +10,10 @@ EMAIL = 'isman.firmansyah@gmail.com'
 
 FILTERS = [
     'markdown+extra+codehilite(css_class=highlight)',
-    'hyphenate',
 ]
 
 VIEWS = {
     '/': {
-        'filters': 'summarize',
         'view': 'index',
         'pagination': '/page/:num'
     },
@@ -23,7 +21,6 @@ VIEWS = {
     '/:year/:slug/': {'view': 'entry'},
 
     '/tag/:name/': {
-        'filters': 'summarize',
         'view': 'tag',
         'pagination': '/tag/:name/:num'
     },

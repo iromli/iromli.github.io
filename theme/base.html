@@ -3,8 +3,12 @@
     <head>
         {% block head -%}
         <title>{{ conf.sitename }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {% if conf.author %}<meta name="author" content="{{ conf.author }}">{% endif %}
+        {% if conf.description %}<meta name="description" content="{{ conf.description }}">{% endif %}
         <link href='/static/css/site.css' rel="stylesheet" type="text/css">
         <link href='/static/css/pygments.css' rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
         {%- endblock %}
     </head>
     <body>
@@ -16,8 +20,6 @@
                         <h2>Explore</h2>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/archives">Archives</a></li>
-                            <li><a href="about/">About</a></li>
                         </ul>
                         <h2>Elsewhere</h2>
                         <ul>
