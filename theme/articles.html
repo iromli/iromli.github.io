@@ -1,27 +1,30 @@
 {% extends "base.html" %}
 
-{% block title %}{{ conf.sitename }} – Artikelübersicht{% endblock %}
+{% block title %}{{ conf.sitename }}{% endblock %}
 
 {% block content %}
-<article>
-  <table id="arc">
-  {% set year = -1 %}
-  {% for key, months in articles.items() | sort(reverse=True) %}
-    <tr>
-        {% if year != key[0] %}
-          {% set year = key[0] %}
-          <th>{{ key[0] ~ ' ' ~ months[0].date.strftime('%B') }}</th>
-        {% else %}
-          <th>{{ months[0].date.strftime('%B')}}</th>
-        {% endif %}
-        <td></td>
-    </tr>
-    {% for entry in months %}
-      <tr><th>{{ entry.date.day }}</th>
-          <td><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></td>
-      </tr>
-    {% endfor %}
-  {% endfor %}
-  </table>
-</article>
+<div class="item">
+    <h1>Hi, Stranger</h1>
+    <p>I'm <strong>Isman Firmansyah</strong>, a music lover and backend developer from Indonesia.</p>
+    <p>My days are (mostly) spent on <a href="http://www.sixreps.com/">SixReps</a>' backend stack (MySQL, Redis) and web apps/services (Tornado, Pyramid, Flask). When i'm not on my employee-mode lifecycle, i hack a few open source projects, read books, watch movies, play video games, or do things that keep me sane as human being.</p>
+    <p>We might have met in person or through social media, but if you don't know me yet, just <a href="mailto:{{ conf.email }}">drop me a line</a> if you wanna talk.</p>
+    <div class="body">
+        <h2>Featured Articles</h2>
+        <ul id="archives">
+            {% for key, months in articles.items() | sort(reverse=True) %}
+            <li class="archives-item">
+                {% set year = key[0] %}
+                <h3>{{ year }}</h3>
+                <ul>
+                    {% for entry in months %}
+                    <li>
+                        <em>{{ entry.date.strftime("%A, %B %d") }}</em> &raquo; <a href="{{ entry.permalink }}">{{ entry.title | e }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}

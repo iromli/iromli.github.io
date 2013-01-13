@@ -380,3 +380,12 @@ blockquote p {
 #legal {
   font-style: italic;
 }
+ul#archives {
+    margin: 0;
+}
+#archives .archives-item {
+    list-style-type: none;
+}
+#archives .archives-item ul {
+    margin-left: 40px;
+}
