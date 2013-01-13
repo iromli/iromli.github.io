@@ -5,9 +5,18 @@
 {% block content %}
 <div class="item">
     <h1>Hi, Stranger</h1>
-    <p>I'm <strong>Isman Firmansyah</strong>, a music lover and backend developer from Indonesia.</p>
-    <p>My days are (mostly) spent on <a href="http://www.sixreps.com/">SixReps</a>' backend stack (MySQL, Redis) and web apps/services (Tornado, Pyramid, Flask). When i'm not on my employee-mode lifecycle, i hack a few open source projects, read books, watch movies, play video games, or do things that keep me sane as human being.</p>
-    <p>We might have met in person or through social media, but if you don't know me yet, just <a href="mailto:{{ conf.email }}">drop me a line</a> if you wanna talk.</p>
+    <div class="row">
+        <div class="span2" id="profile">
+            <div class="thumbnail">
+                <img src="/static/img/profile.jpg" />
+            </div>
+        </div>
+        <div class="span10">
+            <p>I'm <strong>Isman Firmansyah</strong>, a music lover and backend developer from Indonesia.</p>
+            <p>I develop and maintain various web apps/services (using Tornado/Pyramid/Flask, MySQL and Redis) at <a href="http://www.sixreps.com/" target="_blank">SixReps</a>. When i'm not doing that, hacking open source projects, reading books, watching movies, playing video games, or doing things to keep me sane as human being is my favorite.</p>
+            <p>We might have met in person or through social media/IRC -- but if you don't know me yet, just <a href="mailto:{{ conf.email }}">drop me a line</a> if you wanna talk.</p>
+        </div>
+    </div>
     <div class="body">
         <h2>Featured Articles</h2>
         <ul id="archives">
