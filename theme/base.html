@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         {% block head -%}
-        <title>{{ conf.sitename }}</title>
+        <title>{% block title %}{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         {% if conf.author %}<meta name="author" content="{{ conf.author }}">{% endif %}
         {% if conf.description %}<meta name="description" content="{{ conf.description }}">{% endif %}
-        <link href='/static/css/site.css' rel="stylesheet" type="text/css">
-        <link href='/static/css/pygments.css' rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+        <link href="{{ env.path + '/static/css/site.css'}}" rel="stylesheet" type="text/css">
+        <link href="{{ env.path + '/static/css/pygments.css'}}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="{{ env.path + '/static/img/favicon.ico'}}" type="image/x-icon">
         {%- endblock %}
     </head>
     <body>
@@ -19,7 +19,7 @@
                         <h1 id="site-title">{{ conf.sitename|lower }}</h1>
                         <h2>Explore</h2>
                         <ul>
-                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ env.path + '/' }}">Home</a></li>
                         </ul>
                         <h2>Elsewhere</h2>
                         <ul>

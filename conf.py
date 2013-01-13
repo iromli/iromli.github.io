@@ -5,7 +5,7 @@
 SITENAME = 'Groovematic'
 WWW_ROOT = 'http://groovematic.com/'
 
-AUTHOR = 'iromli'
+AUTHOR = 'Isman Firmansyah'
 EMAIL = 'isman.firmansyah@gmail.com'
 
 FILTERS = [
@@ -13,12 +13,9 @@ FILTERS = [
 ]
 
 VIEWS = {
-    '/': {
-        'view': 'index',
-        'pagination': '/page/:num'
-    },
+    '/': {'view': 'index'},
 
-    '/:year/:slug/': {'view': 'entry'},
+    '/:year/:month/:slug/': {'view': 'entry'},
 
     '/tag/:name/': {
         'view': 'tag',
@@ -36,12 +33,9 @@ VIEWS = {
     #     'view': 'rsspertag'
     # },
 
-    '/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
-    '/rss/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
-
-    '/articles/': {'view': 'articles'},
-
-    '/sitemap.xml': {'view': 'sitemap'},
+    # '/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
+    # '/rss/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
+    # '/sitemap.xml': {'view': 'sitemap'},
 
     # Here are some more examples
 
