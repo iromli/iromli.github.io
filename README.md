@@ -1,5 +1,5 @@
 Groovematic
 ===========
 
-The source code behind my [personal website](http://groovematic.com/), released
-under MIT license. See `LICENSE.txt` for details.
+The source code behind my [personal website](http://groovematic.com/).
+[Unlicensed](http://unlicense.org/). See `LICENSE.txt` for details.
