@@ -2,3 +2,4 @@ _build
 output
 .cache
 tmp
+*.pyc

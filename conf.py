@@ -13,7 +13,7 @@ FILTERS = [
 ]
 
 VIEWS = {
-    '/': {'view': 'articles'},
+    '/': {'view': 'homepage'},
     '/:year/:month/:slug/': {'view': 'entry'},
     '/tag/:name/': {
         'view': 'tag',
@@ -28,3 +28,5 @@ VIEWS = {
 THEME = 'theme'
 ENGINE = 'acrylamid.templates.jinja2.Environment'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
+
+VIEWS_DIR = 'views/'
