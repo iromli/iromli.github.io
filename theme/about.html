@@ -17,23 +17,5 @@
             <p>We might have met in person or through social media/IRC -- but if you don't know me yet, just <a href="mailto:{{ conf.email }}">drop me a line</a> if you wanna talk.</p>
         </div>
     </div>
-    <div class="body">
-        <h2>Featured Articles</h2>
-        <ul id="archives">
-            {% for key, months in articles.items() | sort(reverse=True) %}
-            <li class="archives-item">
-                {% set year = key[0] %}
-                <h3>{{ year }}</h3>
-                <ul>
-                    {% for entry in months %}
-                    <li>
-                        <em>{{ entry.date.strftime("%A, %B %d") }}</em> &raquo; <a href="{{ entry.permalink }}">{{ entry.title | e }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
 </div>
 {% endblock %}
