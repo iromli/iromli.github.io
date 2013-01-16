@@ -77,10 +77,6 @@ pre code {
         .lnh(2);
         .fnsize(40);
     }
-    h2 {
-        border-top: solid 1px #DDD;
-        padding-top: 15px;
-    }
     p {
         margin: 20px 0;
         .fnsize(15);
@@ -95,6 +91,10 @@ pre code {
     }
     ul li {
         list-style-type: square;
+    }
+    .item h2 {
+        padding: 15px 0;
+        border-top: solid 1px #DDD;
     }
 }
 
@@ -130,4 +130,19 @@ pre code {
 
 #legal {
     .italic();
+}
+ul#archives {
+    margin: 0;
+    .archives-item {
+        list-style-type: none;
+        ul {
+            margin-left: 40px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    }
+}
+#profile {
+    margin-top: 20px;
 }

@@ -3,3 +3,5 @@ output
 .cache
 tmp
 *.pyc
+assets/static/css/*.css
+!empty
