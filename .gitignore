@@ -3,5 +3,6 @@ output
 .cache
 tmp
 *.pyc
-assets/static/css/*.css
+assets/css/*.css
 !empty
+!README.md

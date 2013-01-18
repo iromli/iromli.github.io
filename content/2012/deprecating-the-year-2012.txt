@@ -9,7 +9,7 @@ date: 31.12.2012
 
 During this year, i spend my days on building web services and console scripts -- less HTML, quirkey JavaScript, and CSS i have to care about. Most of the time, terminal is my truly beloved friend. Here's the screenshot of it:
 
-![console](/static/img/console.png)
+![console](/img/console.png)
 
 From left to right:
 
@@ -19,16 +19,16 @@ From left to right:
 
 ### People I've Met
 
-![Python ID](/static/img/minipycon-2012.jpg){: class="thumbnail"}
+![Python ID](/img/minipycon-2012.jpg){: class="thumbnail"}
 
 Python Indonesia meetup at Detik, and it was fun!! We share knowledge, insight, almost anything about Python and the community itself.
 
-![blaast](/static/img/blaast-sixreps.jpg){: class="thumbnail"}
+![blaast](/img/blaast-sixreps.jpg){: class="thumbnail"}
 
 [Blaast](http://www.blaast.com/) Indonesia representatives visited SixReps HQ.
 They gave a talk about their platform, cloud mobile, and a little bit of NodeJS.
 
-![hackathon](/static/img/startup-asia.jpg){: class="thumbnail"}
+![hackathon](/img/startup-asia.jpg){: class="thumbnail"}
 
 My first hackathon event -- 48 hours, hundreds of developers, cold weather, lovely city Bandung.
 

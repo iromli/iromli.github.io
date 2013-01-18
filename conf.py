@@ -32,4 +32,4 @@ DATE_FORMAT = '%d.%m.%Y, %H:%M'
 
 VIEWS_DIR = 'views/'
 STATIC = ['assets']
-STATIC_IGNORE = ['empty']
+STATIC_IGNORE = ['empty', 'README.md']
