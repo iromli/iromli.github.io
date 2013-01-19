@@ -5,6 +5,8 @@ date: 31.12.2012
 
 ## From 2012, With Love
 
+It's the end of 2012. So many new friends, lessons, and love.
+
 ### Things I've Learnt
 
 During this year, i spend my days on building web services and console scripts -- less HTML, quirkey JavaScript, and CSS i have to care about. Most of the time, terminal is my truly beloved friend. Here's the screenshot of it:
@@ -43,4 +45,4 @@ Well, that's what Plato said. But it's true. I have many things i want to achiev
 * Learn [LessCSS](http://lesscss.org/){: target="_blank"} and [Iced CoffeeScript](maxtaco.github.com/coffee-script/) -- a variant of [CoffeeScript](http://coffeescript.org/){: target="_blank"} with coroutine in mind.
 * Be a better man.
 
-Goodbye 2012, howdy 2013 ...
+**Goodbye 2012, howdy 2013 ...**

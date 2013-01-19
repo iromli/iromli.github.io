@@ -9,7 +9,7 @@ AUTHOR = 'Isman Firmansyah'
 EMAIL = 'isman.firmansyah@gmail.com'
 
 FILTERS = [
-    'markdown+extra+codehilite(css_class=highlight)',
+    'markdown+extra+codehilite(css_class=highlight, force_linenos=True)',
 ]
 
 VIEWS = {

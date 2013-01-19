@@ -26,12 +26,18 @@
             {{ entry.content }}
         </div>
     </div>
-    {% if env.prev is not none %}
-    <span>&larr;</span> <a href="{{ env.path ~ env.prev ~ '/' }}" class="pull-right">{{ env.prev.title | replace("»", "") | trim }}</a>
-    {% endif %}
-    {% if env.next is not none %}
-    <a href="{{ env.path ~ env.next ~ '/' }}" class="pull-left">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
-    {% endif  %}
+    <div class="neighbors">
+        {% if env.prev is not none %}
+        <div class="pull-left">
+            <span>&larr;</span> <a href="{{ env.path ~ env.prev ~ '/' }}">{{ env.prev.title | replace("»", "") | trim }}</a>
+        </div>
+        {% endif %}
+        {% if env.next is not none %}
+        <div class="pull-right">
+            <a href="{{ env.path ~ env.next ~ '/' }}" class="pull-left">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
+        </div>
+        {% endif  %}
+    </div>
 {% endblock %}
 
 {% block footer %}
