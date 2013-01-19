@@ -27,15 +27,11 @@
         </div>
     </div>
     {% if env.prev is not none %}
-        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatright">
-        {{ env.prev.title }}
-        </a>
+    <span>&larr;</span> <a href="{{ env.path ~ env.prev ~ '/' }}" class="pull-right">{{ env.prev.title | replace("»", "") | trim }}</a>
     {% endif %}
     {% if env.next is not none %}
-        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatleft">
-        {{ env.next.title }}
-        </a>
-    {%- endif  %}
+    <a href="{{ env.path ~ env.next ~ '/' }}" class="pull-left">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
+    {% endif  %}
 {% endblock %}
 
 {% block footer %}
