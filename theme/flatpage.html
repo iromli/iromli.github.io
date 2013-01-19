@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {%- if entry is defined -%}
+        {{ entry.title }}
+    {%- else -%}
+        {{ conf.sitename }}
+    {%- endif -%}
+{% endblock %}
+
+{% block head %}
+    {{- super() }}
+    {%- if entry is defined %}
+    <meta name="description" content="{{ entry.description | e }}" />
+    <meta name="keywords" content="{{ entry.tags | join(', ') }}" />
+    {%- endif -%}
+{% endblock %}
+
+{% block content %}
+    <div class="item">
+        <header>
+            <h1>{{ entry.title }}</h1>
+        </header>
+        <div class="body">
+            {{ entry.content }}
+        </div>
+    </div>
+{% endblock %}

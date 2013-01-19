@@ -14,7 +14,6 @@ FILTERS = [
 
 VIEWS = {
     '/': {'view': 'articles'},
-    '/about/': {'view': 'about'},
     '/:year/:month/:slug/': {'view': 'entry'},
     '/tag/:name/': {
         'view': 'tag',
@@ -23,6 +22,7 @@ VIEWS = {
     '/atom.xml': {'filters': ['nohyphenate'], 'view': 'atom'},
     '/rss.xml': {'filters': ['nohyphenate'], 'view': 'rss'},
     # '/sitemap.xml': {'view': 'sitemap'},
+    '/:slug/': {'view': 'page', 'template': 'flatpage.html'},
 
 }
 
@@ -30,6 +30,6 @@ THEME = 'theme'
 ENGINE = 'acrylamid.templates.jinja2.Environment'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
 
-VIEWS_DIR = 'views/'
+VIEWS_DIR = 'views'
 STATIC = ['assets']
 STATIC_IGNORE = ['empty', 'README.md']
