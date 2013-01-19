@@ -17,9 +17,15 @@
 {% endblock %}
 
 {% block content %}
-    {% for entry in env.entrylist %}
-        {% include 'entry.html' %}
-    {% endfor %}
+    <div class="item">
+        <header>
+            <h1>{{ entry.title }}</h1>
+            <p><em>{{ entry.date.strftime("%A, %B %d, %Y") }}</em></p>
+        </header>
+        <div class="body">
+            {{ entry.content }}
+        </div>
+    </div>
     {% if env.prev is not none %}
         <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatright">
         {{ env.prev.title }}
