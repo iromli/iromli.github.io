@@ -28,5 +28,5 @@ Use `watchdog` to monitor changes in any `.less` file.
     watchmedo shell-command \
         --patterns="*.less" \
         --recursive \
-        --command="lessc $PWD/less/style.less > $PWD/assets/css/style.css" \
+        --command="lessc -x $PWD/less/style.less > $PWD/assets/css/style.css" \
         $PWD
