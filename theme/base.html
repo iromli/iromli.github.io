@@ -38,8 +38,11 @@
                         <p id="legal">{{ conf.sitename }} &copy; 2013 <br/><a href="https://github.com/iromli/groovematic" target="_blank">Use the source, Luke!</a></p>
                     </div>
                 </div>
-                <div id="main" class="offset4 span12">
-                    {% block content %}{% endblock %}
+                <div class="offset4 span12">
+                    <div id="main">
+                        {% block content %}{% endblock %}
+                    </div>
+                    {% block footer %}{% endblock %}
                 </div>
             </div>
         </div>
