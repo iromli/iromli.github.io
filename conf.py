@@ -35,3 +35,5 @@ STATIC = ['assets']
 STATIC_IGNORE = ['empty', 'README.md']
 
 DISQUS_SHORTNAME = 'groovematic'
+
+CONTENT_IGNORE = ['drafts/*']
