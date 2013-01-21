@@ -44,28 +44,32 @@
     {{ super() }}
     {% if conf.disqus_shortname %}
         <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            if (window.location.hostname != 'localhost') {
-                var dq_container = document.getElementById('disqus_thread');
-
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                // required: replace example with your forum shortname
-                var disqus_shortname = "{{ conf.disqus_shortname  }}";
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script');
-                    dsq.type = 'text/javascript';
-                    dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-
-                dq_container.style['padding-top'] = '40px';
-                dq_container.style['margin-bottom'] = '40px';
-                dq_container.style['border-top'] = 'dashed 1px #DDD';
-            }
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {% endif %}
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        if (window.location.hostname != 'localhost') {
+            var dq_container = document.getElementById('disqus_thread');
+
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            // required: replace example with your forum shortname
+            var disqus_shortname = "{{ conf.disqus_shortname  }}";
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+
+            dq_container.style['padding-top'] = '40px';
+            dq_container.style['margin-bottom'] = '40px';
+            dq_container.style['border-top'] = 'dashed 1px #DDD';
+        }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 {% endblock %}
