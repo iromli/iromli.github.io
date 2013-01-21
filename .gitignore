@@ -4,5 +4,6 @@ output
 tmp
 *.pyc
 assets/css/*.css
+theme/css/*.css
 !empty
 !README.md
