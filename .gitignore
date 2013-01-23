@@ -7,3 +7,4 @@ assets/css/*.css
 theme/css/*.css
 !empty
 !README.md
+.venv
