@@ -78,7 +78,7 @@ Afterwards, since LESS doesn't have a watcher, i use [Watchdog](https://github.c
     watchmedo shell-command \
         --patterns="*.less" \
         --recursive \
-        --command="lessc -x $PWD/less/style.less > $PWD/theme/css/style.css" \
+        --command="lessc -x $PWD/less/a.less > $PWD/theme/css/b.css" \
         $PWD
 
 Each time any `.less` is modified, `watchmedo` invokes `lessc` and compiles the file into CSS.
@@ -87,6 +87,4 @@ Voila, everything is worked as i expected.
 
 ## The Conclusion
 
-![Chuck Norris](/img/norris-approves.jpg){: class="thumbnail"}
-
-I don't have more words to say, just Try It and See.
+Acrylamid is cool and flexible enough. I don't have more words to say, just Try It and See.
