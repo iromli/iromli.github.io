@@ -1,0 +1,7 @@
+---
+title: Page Not Found
+type: page
+permalink: /404.html
+---
+
+Go [Home](/) Stranger, You're Drunk!
