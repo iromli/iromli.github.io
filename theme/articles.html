@@ -13,7 +13,7 @@
             <ul>
                 {% for entry in months %}
                 <li>
-                    <em>{{ entry.date.strftime("%A, %B %d") }}</em> &raquo; <a href="{{ entry.permalink }}">{{ entry.title | e }}</a>
+                    <em>{{ entry.date.strftime("%a, %b %d") }}</em> &raquo; <a href="{{ entry.permalink }}">{{ entry.title | e }}</a>
                 </li>
                 {% endfor %}
             </ul>
