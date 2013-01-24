@@ -26,15 +26,15 @@
             {{ entry.content }}
         </div>
     </div>
-    <div class="neighbors">
+    <div class="neighbors row">
         {% if env.prev is not none %}
-        <div class="pull-left">
+        <div class="pull-left span6">
             <span>&larr;</span> <a href="{{ env.path ~ env.prev ~ '/' }}">{{ env.prev.title | replace("»", "") | trim }}</a>
         </div>
         {% endif %}
         {% if env.next is not none %}
-        <div class="pull-right">
-            <a href="{{ env.path ~ env.next ~ '/' }}" class="pull-left">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
+        <div class="pull-right span6">
+            <a href="{{ env.path ~ env.next ~ '/' }}">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
         </div>
         {% endif  %}
     </div>
