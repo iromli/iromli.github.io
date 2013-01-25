@@ -29,12 +29,12 @@
     <div class="neighbors row">
         {% if env.prev is not none %}
         <div class="pull-left span6">
-            <span>&larr;</span> <a href="{{ env.path ~ env.prev ~ '/' }}">{{ env.prev.title | replace("»", "") | trim }}</a>
+            <span>&larr;</span>&nbsp;<a href="{{ env.path ~ env.prev ~ '/' }}">{{ env.prev.title | replace("»", "") | trim }}</a>
         </div>
         {% endif %}
         {% if env.next is not none %}
         <div class="pull-right span6">
-            <a href="{{ env.path ~ env.next ~ '/' }}">{{ env.next.title | replace("«", "") | trim }}</a> <span>&rarr;</span>
+            <a href="{{ env.path ~ env.next ~ '/' }}">{{ env.next.title | replace("«", "") | trim }}</a>&nbsp;<span>&rarr;</span>
         </div>
         {% endif  %}
     </div>
