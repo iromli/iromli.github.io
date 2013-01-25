@@ -13,6 +13,6 @@ type: page
     <div class="span10">
         <p>I'm <strong>Isman Firmansyah</strong>, a music lover and backend developer from Indonesia.</p>
         <p>I develop and maintain various web apps/services (using Tornado/Pyramid/Flask, MySQL and Redis) at <a href="http://www.sixreps.com/" target="_blank">SixReps</a>. When i'm not doing that, hacking open source projects, reading books, watching movies, playing video games, or doing things to keep me sane as human being are my favorite ones.</p>
-        <p>We might have met in person or through social media/IRC -- but if you don't know me yet, just <a href="mailto:{{ conf.email }}">drop me a line</a> if you wanna talk.</p>
+        <p>We might have met in person or through social media/IRC -- but if you don't know me yet, just <a href="mailto:isman.firmansyah@gmail.com">drop me a line</a> if you wanna talk.</p>
     </div>
 </div>
