@@ -6,17 +6,15 @@
 <div class="body">
     <h1>Archives</h1>
     <ul id="archives">
-        {% for key, months in articles.items() | sort(reverse=True) %}
+        {% for year, entries in articles.items() | sort(reverse=True) %}
         <li class="archives-item">
-            {% set year = key[0] %}
             <h2>{{ year }}</h2>
-            <ul>
-                {% for entry in months %}
-                <li>
-                    <em>{{ entry.date.strftime("%a, %b %d") }}</em> &raquo; <a href="{{ entry.permalink }}">{{ entry.title | e }}</a>
-                </li>
+            <dl class="row">
+                {% for entry in entries %}
+                <dt class="span2"><em>{{ entry.date.strftime("%A, %b %d") }}</em></dt>
+                <dd class="span10"><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></dd>
                 {% endfor %}
-            </ul>
+            </dl>
         </li>
         {% endfor %}
     </ul>

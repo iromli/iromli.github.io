@@ -11,7 +11,7 @@ It's the end of 2012. So many new friends, lessons, and love.
 
 During this year, i spend my days on building web services and console scripts -- less HTML, quirkey JavaScript, and CSS i have to care about. Most of the time, terminal is my truly beloved friend. Here's the screenshot of it:
 
-![console](/img/console.png)
+![console](/img/2012/12/console.png)
 
 From left to right:
 
@@ -21,16 +21,16 @@ From left to right:
 
 ### People I've Met
 
-![Python ID](/img/minipycon-2012.jpg){: class="thumbnail"}
+![Python ID](/img/2012/12/minipycon-2012.jpg){: class="thumbnail"}
 
 Python Indonesia meetup at Detik, and it was fun!! We share knowledge, insight, almost anything about Python and the community itself.
 
-![blaast](/img/blaast-sixreps.jpg){: class="thumbnail"}
+![blaast](/img/2012/12/blaast-sixreps.jpg){: class="thumbnail"}
 
 [Blaast](http://www.blaast.com/) Indonesia representatives visited SixReps HQ.
 They gave a talk about their platform, cloud mobile, and a little bit of NodeJS.
 
-![hackathon](/img/startup-asia.jpg){: class="thumbnail"}
+![hackathon](/img/2012/12/startup-asia.jpg){: class="thumbnail"}
 
 My first hackathon event -- 48 hours, hundreds of developers, cold weather, lovely city Bandung.
 

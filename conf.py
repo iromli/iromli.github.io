@@ -13,7 +13,7 @@ FILTERS = [
 ]
 
 VIEWS = {
-    '/': {'view': 'articles'},
+    '/': {'view': 'archives'},
     '/:year/:month/:slug/': {'views': ['entry', 'draft']},
     '/tag/:name/': {
         'view': 'tag',
