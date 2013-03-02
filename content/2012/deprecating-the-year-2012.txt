@@ -41,8 +41,8 @@ My first hackathon event -- 48 hours, hundreds of developers, cold weather, love
 Well, that's what Plato said. But it's true. I have many things i want to achieve:
 
 * Improve my Python knowledge.
-* I have things for concurrency so i will learn programming language designed for it ([Go](http://golang.org/){: target="_blank"} or [Elixir](elixir-lang.org){: target="_blank"} is promising).
+* I have things for concurrency so i wanna learn programming language designed for it -- [Go](http://golang.org/){: target="_blank"} is very interesting, and [Elixir](elixir-lang.org){: target="_blank"} is promising.
 * Learn [LessCSS](http://lesscss.org/){: target="_blank"} and [Iced CoffeeScript](maxtaco.github.com/coffee-script/) -- a variant of [CoffeeScript](http://coffeescript.org/){: target="_blank"} with coroutine in mind.
 * Be a better man.
 
-**Goodbye 2012, howdy 2013 ...**
+Goodbye 2012, howdy 2013 ...
