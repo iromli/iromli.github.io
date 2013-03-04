@@ -1,6 +1,6 @@
 ---
 title: Tornado, Lessons Learned
-date: 03.03.2013, 04:19
+date: 04.03.2013, 04:19
 ---
 
 ## Back In The Days
@@ -234,7 +234,7 @@ It helps you write a non-callback-style code.
 
 Yay, it looks better now. Say goodbye to callbacks spaghetti then.
 
-## Advices (If You Don't Mind)
+## Morals Of The Story
 
 1. You don't care about asynchronous but still wanna use Tornado? Just do it.
 2. You have things for asynchronous and wanna use Tornado? Do it carefully.
