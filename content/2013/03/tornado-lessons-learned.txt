@@ -5,15 +5,20 @@ date: 03.03.2013, 04:19
 
 ## Back In The Days
 
-Last year, during [SixReps](http://www.sixreps.com) days, me and Tino ([@kusut](http://twitter.com/kusut))
-worked on and maintained a project built on top of [Tornado](http://tornadoweb.org/).
+Last year, during [SixReps][sixreps] days, me and Tino ([@kusut][_kusut])
+worked on and maintained a project built on top of [Tornado][tornado].
 The project itself is a web service that accepts 3rd-party apps request
 and serves the response through HTTP.
-We used MySQL as primary datasource, [Redis](http://redis.io/) for caches and queues,
+We used MySQL as primary datasource, [Redis][redis] for caches and queues,
 and Amazon S3 to store uploaded images.
 We were happy enough to see that our stack is running well for our usecase.
 
 __FYI__, both of us aren't worked on that project any longer.
+
+[sixreps]: http://www.sixreps.com
+[_kusut]: http://twitter.com/kusut
+[tornado]: http://tornadoweb.org/
+[redis]: http://redis.io/
 
 ## For Your Consideration
 
@@ -38,10 +43,13 @@ asynchronous, but you don't even care about asynchronous at all?
 
 1.  Tornado is not a full-stack framework. It's simple, well-written, and well-documented.
     By reading the sourcecode itself, you'll understand how it works ... eventually.
-2.  Tornado has its own web framework (inspired by [web.py](#) and [AppEngine](#)).
-3.  Tornado has its own templating language (quite similar to [Jinja](#) or [Django](#) template).
+2.  Tornado has its own web framework (much like [web.py][webpy]).
+3.  Tornado has its own templating language (quite similar to [Jinja][jinja]).
 4.  Tornado has its own web server.
-5.  The most important thing, you can use (almost?) any Python library, even if it's not written specifically for Tornado.
+5.  The most important things, you can use (almost?) any Python library, even if it's not written specifically for Tornado.
+
+[jinja]: http://jinja.pocoo.org/
+[webpy]: http://webpy.org/
 
 Let me show you snippets to illustrate point 2 - 4. First things first, create
 `app.py`:
@@ -69,7 +77,7 @@ Let me show you snippets to illustrate point 2 - 4. First things first, create
         # listens incoming request on port 8000
         srv.bind(8000, '')
 
-        # starts the server using 1 master process per app
+        # starts the server using 1 process
         # unless you know what you're doing, always set to 1
         srv.start(1)
 
@@ -88,10 +96,13 @@ Pretty straight-forward isn't it?
 
 So, what's the _tradeoff of being synchronous_?
 You'll lose the power of Tornado event-loop itself, of course.
-Some users claimed they use a combination of Django/[Flask](#) and Tornado.
+Some users claimed they use a combination of [Django][django]/[Flask][flask] and Tornado.
 It's true that Tornado has a WSGI-compatible web server,
 but you can't expect your app to go asynchronously out-of-the-box
 by simply running it behind the Tornado web server.
+
+[django]: https://www.djangoproject.com/
+[flask]: http://flask.pocoo.org
 
 ## Going Asynchronous (Or How To Not Blocking The IOLoop)
 
@@ -99,8 +110,10 @@ I already mentioned `tornado.ioloop.IOLoop` on previous section.
 Basically, IOLoop is a Tornado binding to the underlying event-loop
 (`epoll` on Linux and `kqueue` on BSD).
 I don't know about Windows support, but there's a project
-called [tornado-pyuv](#) that utilizes `libuv` to provide event-loop that runs
+called [tornado-pyuv][tornado-pyuv] that utilizes `libuv` to provide event-loop that runs
 on all platforms.
+
+[tornado-pyuv]: https://github.com/saghul/tornado-pyuv
 
 You have to be very careful when writing asynchronous app using Tornado.
 Your simple code that uses `stdlib` callables or 3rd-party libraries might blocking the IOLoop.
@@ -153,15 +166,15 @@ Please have a look at `IOLoop.add_timeout` API.
 
 To be honest, 3rd-party libraries written specifically for Tornado is not as
 much as, let say, Django.
-You have to dig into [Tornado wiki](https://github.com/facebook/tornado/wiki),
+You have to dig into [Tornado wiki](https://github.com/facebook/tornado/wiki/Links),
 [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/),
 [Tornado gist](http://tornadogists.org/), or somewhere else
 (IRC/mailing list/search engine) to find what you're looking for.
 
 If for some reasons you must use blocking library, you have options to run the
 blocking execution in separate process,
-either using `threading` ([example](#)), `multiprocessing` ([example](#)),
-or queue ([example](#)).
+either using [threading][example1], [multiprocessing][example2],
+or [queue][example3].
 The implementation may vary, but they share a same concept:
 
 1. Wrap the blocking execution and give the control back to IOLoop immediately.
@@ -172,6 +185,10 @@ So, what's the _tradeoff of going asynchronous_?
 Once you're using blocking library, IOLoop is blocked.
 Depending on your usecase, it might be bad for your business.
 That's a price to pay.
+
+[example1]: http://tornadogists.org/2894704/
+[example2]: http://tornadogists.org/2185380/
+[example3]: http://tornadogists.org/3849257/
 
 ## Callbacks Spaghetti? Fear No More!
 
@@ -217,7 +234,7 @@ It helps you write a non-callback-style code.
 
 Yay, it looks better now. Say goodbye to callbacks spaghetti then.
 
-## Moral Of The Story
+## Advices (If You Don't Mind)
 
 1. You don't care about asynchronous but still wanna use Tornado? Just do it.
 2. You have things for asynchronous and wanna use Tornado? Do it carefully.
