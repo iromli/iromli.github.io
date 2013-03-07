@@ -135,7 +135,7 @@ To illustrate `stdlib` callable which blocks IOLoop:
         @tornado.gen.engine
         def get(self):
             client = tornado.httpclient.AsyncHTTPClient()
-            response = tornado.gen.Task(client.fetch('http://groovematic.com/'))
+            response = tornado.gen.Task(client.fetch, 'http://groovematic.com/')
             self.write(response.code)
             self.finish()
 
@@ -228,7 +228,7 @@ It helps you write a non-callback-style code.
         @tornado.gen.engine
         def get(self):
             client = tornado.httpclient.AsyncHTTPClient()
-            response = tornado.gen.Task(client.fetch('http://groovematic.com/'))
+            response = tornado.gen.Task(client.fetch, 'http://groovematic.com/')
             self.write(response.code)
             self.finish()
 
