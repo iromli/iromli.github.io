@@ -126,17 +126,18 @@ To illustrate `stdlib` callable which blocks IOLoop:
     #!python
     import time
 
-    import tornado.gen
     import tornado.httpclient
+    import tornado.httpserver
     import tornado.web
 
     class MainHandler(tornado.web.RequestHandler):
         @tornado.web.asynchronous
-        @tornado.gen.engine
         def get(self):
             client = tornado.httpclient.AsyncHTTPClient()
-            response = yield tornado.gen.Task(client.fetch, 'http://groovematic.com/')
-            self.write(response.code)
+            client.fetch('http://groovematic.com/', callback=self._on_finish)
+
+        def _on_finish(self, response):
+            self.write(str(response.code))
             self.finish()
 
     class SleepHandler(tornado.web.RequestHandler):
@@ -207,10 +208,10 @@ Lets take a look an example below:
         @tornado.web.asynchronous
         def get(self):
             client = tornado.httpclient.AsyncHTTPClient()
-            client.fetch('http://groovematic.com/', callback=self._on_response)
+            client.fetch('http://groovematic.com/', callback=self._on_finish)
 
-        def _on_response(self, response):
-            self.write(response.code)
+        def _on_finish(self, response):
+            self.write(str(response.code))
             self.finish()
 
 Nothing's wrong isn't it? But what if you want to get the result directly
@@ -229,7 +230,7 @@ It helps you write a non-callback-style code.
         def get(self):
             client = tornado.httpclient.AsyncHTTPClient()
             response = yield tornado.gen.Task(client.fetch, 'http://groovematic.com/')
-            self.write(response.code)
+            self.write(str(response.code))
             self.finish()
 
 Yay, it looks better now. Say goodbye to callbacks spaghetti then.
