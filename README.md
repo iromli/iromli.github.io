@@ -9,7 +9,7 @@ Requirements
 
 Python libraries:
 
-    `pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 NodeJS libraries:
 
