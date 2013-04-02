@@ -18,13 +18,9 @@
                         <h1 id="site-title">{{ conf.sitename|lower }}</h1>
                         <h2>Explore</h2>
                         <ul>
-                            <li><a href="{{ env.path + '/' }}">Home</a></li>
+                            <li><a href="{{ env.path + '/' }}">Archives</a></li>
+                            <li><a href="{{ env.path + '/atom.xml' }}">Feeds</a></li>
                             <li><a href="{{ env.path + '/about/' }}">About</a></li>
-                        </ul>
-                        <h2>Feeds</h2>
-                        <ul>
-                            <li><a href="{{ env.path + '/atom.xml' }}">Atom</a></li>
-                            <li><a href="{{ env.path + '/rss.xml' }}">RSS</a></li>
                         </ul>
                         <h2>Elsewhere</h2>
                         <ul>
