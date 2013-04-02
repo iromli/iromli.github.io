@@ -87,6 +87,7 @@ Let me show you snippets to illustrate point 2 - 4. First things first, create
 Before running the app, make sure you have `homepage.html` template, located
 under `templates` directory:
 
+    #!html
     <h1>Greeting from Tornado</h1>
     <p>Hello, {{ user }}</p>
 
