@@ -9,8 +9,7 @@ Requirements
 
 Python libraries:
 
-* [Acrylamid](https://github.com/posativ/acrylamid)
-* [Watchdog](https://github.com/gorakhargosh/watchdog)
+    `pip install -r requirements.txt`
 
 NodeJS libraries:
 
