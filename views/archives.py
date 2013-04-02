@@ -19,7 +19,7 @@ class Archives(View):
         path = joinurl(conf['output_dir'], self.path, 'index.html')
 
         if exists(path) and not (conf.modified or env.modified or tt.modified):
-            event.skip(path)
+            event.skip('archive', path)
             raise StopIteration
 
         archives = {}
