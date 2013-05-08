@@ -42,7 +42,7 @@ Well, that's what Plato said. But it's true. I have many things i want to achiev
 
 * Improve my Python knowledge.
 * I have things for concurrency so i wanna learn programming language designed for it -- [Go](http://golang.org/){: target="_blank"} is very interesting, and [Elixir](elixir-lang.org){: target="_blank"} is promising.
-* Learn [LessCSS](http://lesscss.org/){: target="_blank"} and [Iced CoffeeScript](maxtaco.github.com/coffee-script/) -- a variant of [CoffeeScript](http://coffeescript.org/){: target="_blank"} with coroutine in mind.
+* <del>Learn [LessCSS](http://lesscss.org/){: target="_blank"} and [Iced CoffeeScript](maxtaco.github.com/coffee-script/) -- a variant of [CoffeeScript](http://coffeescript.org/){: target="_blank"} with coroutine in mind.</del> Apparently, my interest has been shifted to anything that involves less client-side programming.
 * Be a better man.
 
 Goodbye 2012, howdy 2013 ...
