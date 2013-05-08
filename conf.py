@@ -20,7 +20,7 @@ VIEWS = {
         'pagination': '/tag/:name/:num/'
     },
     '/atom.xml': {'filters': ['nohyphenate'], 'view': 'atom'},
-    '/rss.xml': {'filters': ['nohyphenate'], 'view': 'rss'},
+    # '/rss.xml': {'filters': ['nohyphenate'], 'view': 'rss'},
     # '/sitemap.xml': {'view': 'sitemap'},
     '/:slug/': {'view': 'page', 'template': 'flatpage.html'},
 
