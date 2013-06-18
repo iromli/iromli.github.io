@@ -1,0 +1,44 @@
+---
+title: Once Upon A Time In Singapore
+date: 20.06.2013
+---
+
+## PyCon SG 2013
+
+![pycon-sg-1](/img/2013/06/pycon-sg-1.jpg){: class="thumbnail"}
+
+Wes McKinney
+
+![pycon-sg-2](/img/2013/06/pycon-sg-2.jpg){: class="thumbnail"}
+
+Victor
+
+![pycon-sg-3](/img/2013/06/pycon-sg-3.jpg){: class="thumbnail"}
+
+Martin
+
+![pycon-sg-4](/img/2013/06/pycon-sg-4.jpg){: class="thumbnail"}
+
+rundown
+
+![pycon-sg-5](/img/2013/06/pycon-sg-5.jpg){: class="thumbnail"}
+
+pycon-apac
+
+## Foobar
+
+![sg-trip-1](/img/2013/06/sg-trip-1.jpg){: class="thumbnail"}
+
+foo
+
+![sg-trip-2](/img/2013/06/sg-trip-2.jpg){: class="thumbnail"}
+
+lorem
+
+![sg-trip-3](/img/2013/06/sg-trip-3.jpg){: class="thumbnail"}
+
+ipsum
+
+![sg-trip-4](/img/2013/06/sg-trip-4.jpg){: class="thumbnail"}
+
+going home
