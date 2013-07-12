@@ -9,12 +9,24 @@ Requirements
 
 Python libraries:
 
-    pip install -r requirements.txt
-
+    $ pip install -r requirements.txt
 
 Hacking
 -------
 
-Compile and serve the content at `http://localhost:8000/`
+Compile and serve the content at `http://localhost:8000/`:
 
-    acrylamid autocompile
+    $ acrylamid autocompile
+
+Deploy:
+
+    $ rm -rf output
+    $ acrylamid compile
+    $ git checkout gh-pages
+    $ rsync -rvc --delete-after --exclude=CNAME --exclude=.git* output/ .
+    $ git push origin gh-pages
+
+Todo
+----
+
+* Robust deployment
