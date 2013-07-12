@@ -11,21 +11,10 @@ Python libraries:
 
     pip install -r requirements.txt
 
-NodeJS libraries:
-
-* [LESS](http://lesscss.org/)
 
 Hacking
 -------
 
-Compile and serve the content at http://localhost:8000/
+Compile and serve the content at `http://localhost:8000/`
 
     acrylamid autocompile
-
-Use `watchdog` to monitor changes in any `.less` file.
-
-    watchmedo shell-command \
-        --patterns="*.less" \
-        --recursive \
-        --command="lessc -x $PWD/less/style.less > $PWD/theme/css/style.css" \
-        $PWD

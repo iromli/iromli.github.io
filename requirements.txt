@@ -1,3 +1,2 @@
 Pygments==1.6
 acrylamid==0.7.1
-watchdog==0.6.0

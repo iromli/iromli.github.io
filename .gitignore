@@ -5,6 +5,7 @@ tmp
 *.pyc
 assets/css/*.css
 theme/css/*.css
+!theme/css/style.css
 !empty
 !README.md
 .venv
