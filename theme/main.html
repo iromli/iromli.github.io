@@ -17,26 +17,33 @@
 {% endblock %}
 
 {% block content %}
-    <div class="item">
-        <header>
-            <h1>{{ entry.title }}</h1>
-            <p><em>{{ entry.date.strftime("%A, %B %d, %Y") }}</em></p>
-        </header>
-        <div class="body">
-            {{ entry.content }}
-        </div>
+    <div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">{{ entry.title }}</h2>
+                <p class="content-subhead">
+                    <em>{{ entry.date.strftime("%A, %B %d, %Y") }}</em>
+                </p>
+            </header>
+
+            <div class="post-description">
+                <p>{{ entry.content }}</p>
+            </div>
+        </section>
     </div>
-    <div class="neighbors row">
+
+    <div class="neighbors">
         {% if env.prev is not none %}
-        <div class="pull-left span6">
-            <span>&larr;</span>&nbsp;<a href="{{ env.path ~ env.prev }}">{{ env.prev.title | replace("»", "") | trim }}</a>
+        <div class="pull-left">
+            <span>&larr;</span>&nbsp;<a href="{{ env.path ~ env.prev }}">prev</a>
         </div>
         {% endif %}
         {% if env.next is not none %}
-        <div class="pull-right span6">
-            <a href="{{ env.path ~ env.next }}">{{ env.next.title | replace("«", "") | trim }}</a>&nbsp;<span>&rarr;</span>
+        <div class="pull-right">
+            <a href="{{ env.path ~ env.next }}">next</a>&nbsp;<span>&rarr;</span>
         </div>
         {% endif  %}
+        <div style="clear:both;"></div>
     </div>
 {% endblock %}
 
@@ -71,5 +78,4 @@
         }
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
 {% endblock %}

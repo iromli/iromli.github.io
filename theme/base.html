@@ -1,47 +1,59 @@
-<!DOCTYPE HTML>
+
+<!doctype html>
 <html lang="en">
-    <head>
-        {% block head -%}
+<head>
+    {% block head -%}
         <title>{% block title %}{% endblock %}</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        {% if conf.author %}<meta name="author" content="{{ conf.author }}">{% endif %}
-        {% if conf.description %}<meta name="description" content="{{ conf.description }}">{% endif %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ env.path + '/css/pure-min.css'}}" rel="stylesheet" type="text/css">
         <link href="{{ env.path + '/css/style.css'}}" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="{{ env.path + '/img/favicon.ico'}}" type="image/x-icon">
-        {%- endblock %}
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div id="sidebar-container">
-                    <div id="sidebar" class="span3">
-                        <h1 id="site-title">{{ conf.sitename|lower }}</h1>
-                        <h2>Explore</h2>
-                        <ul>
-                            <li><a href="{{ env.path + '/' }}">Archives</a></li>
-                            <li><a href="{{ env.path + '/atom.xml' }}">Feeds</a></li>
-                            <li><a href="{{ env.path + '/about/' }}">About</a></li>
-                        </ul>
-                        <h2>Elsewhere</h2>
+        {% if conf.author %}<meta name="author" content="{{ conf.author }}">{% endif %}
+        {% if conf.description %}<meta name="description" content="{{ conf.description }}">{% endif %}
+    {%- endblock %}
+</head>
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <header class="header">
+                <hgroup>
+                    <h1 class="brand-title">{{ conf.sitename|lower }}</h1>
+                    <h2 class="brand-tagline"></h2>
+                </hgroup>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="{{ env.path + '/' }}">Archives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="{{ env.path + '/atom.xml' }}">Feeds</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="content">
+                {% block content %}{% endblock %}
+                {% block footer %}{% endblock %}
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <p>{{ conf.sitename }} &copy; 2013</p>
                         <ul>
                             <li>
-                                <a href="http://github.com/iromli" target="_blank">GitHub</a>
+                                <a href="{{ env.path + '/about/' }}">Who Am I?</a>
                             </li>
                             <li>
-                                <a href="http://twitter.com/iromli" target="_blank">Twitter</a>
+                                <a href="https://github.com/iromli/groovematic" target="_blank">Use The Source, Luke!</a>
                             </li>
                         </ul>
-                        <p id="legal">{{ conf.sitename }} &copy; 2013 <br/><a href="https://github.com/iromli/groovematic" target="_blank">Use the source, Luke!</a></p>
                     </div>
-                </div>
-                <div class="offset4 span12">
-                    <div id="main">
-                        {% block content %}{% endblock %}
-                    </div>
-                    {% block footer %}{% endblock %}
                 </div>
             </div>
         </div>
-        {% block extra_js %}{% endblock %}
-    </body>
+    </div>
+    {% block extra_js %}{% endblock %}
+</body>
 </html>
