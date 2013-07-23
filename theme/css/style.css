@@ -265,3 +265,11 @@ pre code{border:#D5D5D5 solid 1px;overflow-x:auto;padding:10px;display:block;whi
 
 .pull-right {float: right;}
 .pull-left {float: left;}
+img.thumbnail {
+    border: solid 1px #DDD;
+    padding: 0.2em;
+}
+#legal {
+    font-style: italic;
+    color: #444;
+}

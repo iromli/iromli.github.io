@@ -17,12 +17,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="item">
-        <header>
-            <h1>{{ entry.title }}</h1>
-        </header>
-        <div class="body">
-            {{ entry.content }}
-        </div>
+    <div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">Hi, Stranger</h2>
+            </header>
+
+            <div class="post-description">
+                {{ entry.content }}
+            </div>
+        </section>
     </div>
 {% endblock %}

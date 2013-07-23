@@ -3,20 +3,23 @@
 {% block title %}{{ conf.sitename }}{% endblock %}
 
 {% block content %}
-<div class="body">
-    <h1>Archives</h1>
-    <ul id="archives">
-        {% for year, entries in articles.items() | sort(reverse=True) %}
-        <li class="archives-item">
-            <h2>{{ year }}</h2>
-            <dl class="row">
-                {% for entry in entries %}
-                <dt class="span2"><em>{{ entry.date.strftime("%A, %b %d") }}</em></dt>
-                <dd class="span10"><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></dd>
+    <div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">Archives</h2>
+            </header>
+
+            <div class="post-description">
+                {% for year, entries in articles.items() | sort(reverse=True) %}
+                    <h3>{{ year }}</h3>
+                    <dl>
+                        {% for entry in entries %}
+                        <dt class="pure-u-1-5"><em>{{ entry.date.strftime("%A, %b %d") }}</em></dt>
+                        <dd class="pure-u-3-5"><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></dd>
+                        {% endfor %}
+                    </dl>
                 {% endfor %}
-            </dl>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+            </div>
+        </section>
+    </div>
 {% endblock %}
