@@ -273,3 +273,6 @@ img.thumbnail {
     font-style: italic;
     color: #444;
 }
+.neighbors {
+    margin-bottom: 4em;
+}
