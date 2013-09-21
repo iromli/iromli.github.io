@@ -248,7 +248,7 @@ blockquote{padding:0 0 0 15px;margin:0 0 20px;border-left:5px solid #eeeeee;}blo
 .codehilite .vi{color:#000000;}
 .codehilite .il{color:#0000cf;font-weight:bold;}
 .codehilitetable{border-collapse:collapse;border:#DDD solid 1px;}
-.codehilitetable .code{width:100%;}
+.codehilitetable .code{width:100%; padding: 0;}
 .codehilitetable .linenos{background-color:#ECECEC;text-align:right;border-right:#DDD solid 1px;padding:0 10px;}
 .codehilitetable .codehilite{
     padding: 10px;
@@ -257,6 +257,9 @@ blockquote{padding:0 0 0 15px;margin:0 0 20px;border-left:5px solid #eeeeee;}blo
 .codehilite, .linenos {
     line-height: 1.5em;
     font-size: 0.8em;
+}
+.linenos pre {
+    margin: 10px 0;
 }
 .codehilite pre {margin:0;}
 code{font-family:Consolas,Menlo,"Courier New",monospace;white-space:nowrap;line-height:20px;font-size:12px;background-color:#FAFAFA;border:1px solid #CCC;margin:0px 2px;padding:1px 3px;}
