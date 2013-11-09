@@ -20,13 +20,9 @@ Compile and serve the content at `http://localhost:8000/`:
 
 Deploy:
 
-    $ rm -rf output
-    $ acrylamid compile
-    $ git checkout gh-pages
-    $ rsync -rvc --delete-after --exclude=CNAME --exclude=.git* output/ .
-    $ git push origin gh-pages
+    $ acrylamid deploy
 
 Todo
 ----
 
-* Robust deployment
+* <del>Robust deployment</del>
