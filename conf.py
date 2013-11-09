@@ -37,3 +37,20 @@ STATIC_IGNORE = ['empty', 'README.md']
 DISQUS_SHORTNAME = 'groovematic'
 
 CONTENT_IGNORE = ['drafts/*']
+
+deploy_msg = "automated deployment at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+commands = (
+    "rm -rf output",
+    "acrylamid compile",
+    "git checkout gh-pages",
+    "rsync -rvc --delete-after --exclude=CNAME --exclude=.git* output/ .",
+    "git commit -am '%s'" % deploy_msg,
+    "git push origin gh-pages",
+    "git checkout master",
+)
+
+
+DEPLOYMENT = {
+    "default": " && ".join(commands),
+}
