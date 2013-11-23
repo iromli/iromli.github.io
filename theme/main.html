@@ -17,13 +17,22 @@
 {% endblock %}
 
 {% block content %}
+    {% if entry is defined %}
     <div class="posts">
         <section class="post">
             <header class="post-header">
                 <h2 class="post-title">{{ entry.title }}</h2>
-                <p class="content-subhead">
+                <div class="content-subhead">
                     <em>{{ entry.date.strftime("%A, %B %d, %Y") }}</em>
-                </p>
+                    {%- if entry.tags -%}
+                    &nbsp;&raquo;&nbsp;<span>
+                        {% for tag in entry.tags | tagify -%}
+                            <a href="{{ env.path + tag.href }}" rel="tag">{{ tag.title }}</a>
+                            {%- if loop.revindex > 1 -%}&nbsp;{% endif %}
+                        {% endfor %}
+                        </span>
+                    {% endif %}
+                </div>
             </header>
 
             <div class="post-description">
@@ -45,6 +54,7 @@
         {% endif  %}
         <div style="clear:both;"></div>
     </div>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}

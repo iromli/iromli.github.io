@@ -15,9 +15,9 @@ FILTERS = [
 VIEWS = {
     '/': {'view': 'archives'},
     '/:year/:month/:slug/': {'views': ['entry', 'draft']},
-    '/tag/:name/': {
+    '/tags/:name/': {
         'view': 'tag',
-        'pagination': '/tag/:name/:num/'
+        'pagination': '/tags/:name/:num/'
     },
     '/atom.xml': {'filters': ['nohyphenate'], 'view': 'atom'},
     # '/rss.xml': {'filters': ['nohyphenate'], 'view': 'rss'},
@@ -31,12 +31,10 @@ ENGINE = 'acrylamid.templates.jinja2.Environment'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
 
 VIEWS_DIR = 'views'
-STATIC = ['assets']
 STATIC_IGNORE = ['empty', 'README.md']
+CONTENT_EXTENSION = [".md"]
 
 DISQUS_SHORTNAME = 'groovematic'
-
-CONTENT_IGNORE = ['drafts/*']
 
 deploy_msg = "automated deployment at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
