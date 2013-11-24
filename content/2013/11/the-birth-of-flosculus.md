@@ -1,7 +1,6 @@
 ---
 title: The Birth of Flosculus
 date: 23.11.2013, 05:18
-draft: true
 ---
 
 ## A Call For Help
@@ -63,7 +62,7 @@ Well, i can haz Beaver for Fluentd?
 
 So i sat down and read the internal documentation on how [Beautiplan][beautiplan]
 infrastructure are made of — especially the logging files management section.
-Anyway, here's the schema:
+Anyway, here's the schema with a little detail for each component:
 
 ![schema](/img/2013/11/schema.png){: class="thumbnail"}
 
@@ -94,10 +93,12 @@ Anyway, here's the schema:
     or doing shell command and pipeline magic (better) to know what's really
     going on in your production-ready application?
     Enter [Kibana][old_kibana] or [Kibana 3][new_kibana] then!
-    I think you're gonna like this web-based log file instrospection (if that's
-    the term).
+    I think you'll like this web-based log visualization app.
 
-TBD
+Given the schema above, i realized that i need to replace _forwarder_ with
+Beaver-like library. After all, the box where current _forwarder_ program lives
+right now, is a server where it has plenty of Python-based scripts there.
+So i though, let's add yet another Python script.
 
 [beautiplan]: http://www.beautiplan.com/
 [heka]: https://github.com/mozilla-services/heka
@@ -105,6 +106,22 @@ TBD
 [old_kibana]: http://rashidkpc.github.io/Kibana/
 [new_kibana]: http://www.elasticsearch.org/overview/kibana/
 
-## Current Status: Flosculus
+## Current Status: Flosculus in Action
 
-TBD
+At its core, Beaver uses [this script][script] (MIT-licensed).
+So i took down that one, combined with [Python binding for Fluentd][fluent-logger],
+did some modification, and voila ... it's [Flosculus][flosculus].
+Flosculus is very young and definetely will need lots of enhancements.
+But it's already running in production though.
+
+Yes, i know some of you might said, _"Dont reinvent the wheel"_.
+But what if the wheels aren't exactly what i need?
+
+![bicycle](/img/2013/11/bicycle.jpg){: class="thumbnail"}
+
+In the end, Flosculus is my attempt to create something like Beaver or Fluentd `in_tail` plugin.
+I wanna see it grows (or likely dies prematurely). The future is far beyond.
+
+[script]: http://code.activestate.com/recipes/577968-log-watcher-tail-f-log/
+[fluent-logger]: https://github.com/fluent/fluent-logger-python
+[flosculus]: https://github.com/iromli/flosculus
