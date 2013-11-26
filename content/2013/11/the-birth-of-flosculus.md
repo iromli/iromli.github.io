@@ -1,6 +1,7 @@
 ---
 title: The Birth of Flosculus
 date: 23.11.2013, 05:18
+tags: [python]
 ---
 
 ## A Call For Help

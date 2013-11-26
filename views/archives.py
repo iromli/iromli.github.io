@@ -9,7 +9,7 @@ class Archives(View):
     """
     priority = 80.0
 
-    def init(self, conf, env, template='articles.html'):
+    def init(self, conf, env, template='archives.html'):
         self.template = template
 
     def generate(self, conf, env, data):

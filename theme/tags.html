@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ conf.sitename }}{% endblock %}
+
+{% block content %}
+    <div class="posts">
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">Tagged as {{ env.tag }}</h2>
+            </header>
+            <div class="post-description">
+                <dl>
+                {% for entry in env.entrylist %}
+                    <dt class="pure-u-1-5"><em>{{ entry.date.strftime("%A, %b %d") }}</em></dt>
+                    <dd class="pure-u-3-5"><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></dd>
+                {% endfor %}
+                </dl>
+            </div>
+            {{ env.tags }}
+        </section>
+    </div>
+{% endblock %}
