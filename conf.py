@@ -44,7 +44,7 @@ commands = (
     "acrylamid compile",
     "git checkout gh-pages",
     "rsync -rvc --delete-after --exclude=CNAME --exclude=.git* output/ .",
-    "git commit add .",
+    "git add .",
     "git commit -am '%s'" % deploy_msg,
     "git push origin gh-pages",
     "git checkout master",
