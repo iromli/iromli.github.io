@@ -10,15 +10,17 @@
             </header>
 
             <div class="post-description">
-                {% for year, entries in articles.items() | sort(reverse=True) %}
-                    <h3>{{ year }}</h3>
-                    <dl>
-                        {% for entry in entries %}
+            {% for year in env.entrylist | archivesfor %}
+                <h3>{{ year }}</h3>
+                <dl>
+                {% for entries in year %}
+                    {% for entry in entries["items"] %}
                         <dt class="pure-u-1-5"><em>{{ entry.date.strftime("%A, %b %d") }}</em></dt>
                         <dd class="pure-u-3-5"><a href="{{ entry.permalink }}">{{ entry.title | e }}</a></dd>
-                        {% endfor %}
-                    </dl>
+                    {% endfor %}
                 {% endfor %}
+                </dl>
+            {% endfor %}
             </div>
         </section>
     </div>

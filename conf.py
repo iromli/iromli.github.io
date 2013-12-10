@@ -13,7 +13,7 @@ FILTERS = [
 ]
 
 VIEWS = {
-    '/': {'view': 'archives'},
+    "/": {"view": "archive", "template": "archives.html"},
     '/:year/:month/:slug/': {'views': ['entry', 'draft']},
     '/tags/:name/': {
         'view': 'tag',
@@ -31,7 +31,6 @@ THEME = 'theme'
 ENGINE = 'acrylamid.templates.jinja2.Environment'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
 
-VIEWS_DIR = 'views'
 STATIC_IGNORE = ['empty', 'README.md']
 CONTENT_EXTENSION = [".md"]
 
