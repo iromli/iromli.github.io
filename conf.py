@@ -36,7 +36,7 @@ CONTENT_EXTENSION = [".md"]
 
 DISQUS_SHORTNAME = 'groovematic'
 
-deploy_msg = "automated deployment at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+deploy_msg = "automated deployment"
 
 commands = (
     "rm -rf output",
