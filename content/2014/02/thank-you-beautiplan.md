@@ -11,7 +11,7 @@ Almost a year ago, the majority of people who built SixReps were joining [Beauti
 As you can see, Beautiplan has its [lite][lite], [mobile web][mobile], and [Android][android] version.
 I've been involved in those apps although I didn't contribute any code at all.
 I was a member of their backend engineering team — my primary role was to maintain internal API,
-log files management, error reporting platform, etc.
+log aggregation, error reporting, etc.
 
 I hate to say goodbye, but at the end of this month, I will no longer work for Beautiplan.
 It's a tough decision, but I have to move on as my interests have been shifted and I'm pursuing something else.
