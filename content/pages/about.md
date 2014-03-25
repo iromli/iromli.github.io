@@ -6,12 +6,12 @@ type: page
 
 Hello there,
 
-I'm **Isman Firmansyah**, a (freelance) __[software engineer][github]__ and
+I'm **Isman Firmansyah**, a __[software engineer][github]__ and
 occasional [meetup][meetup] __[speaker][speakerdeck]__ from Indonesia.
 
-Software engineering is what I'm focus on right now, but i __do__ have interests for other things:
+Software engineering is what I'm focusing on right now, but i __do__ have interests for other things:
 
-* DevOps movement
+* DevOps tools
 * Distributed system
 * Community work — as a [Python Indonesia][python-id] and [Docker Jakarta][docker-id] co-organizer
 
