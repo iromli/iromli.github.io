@@ -9,9 +9,10 @@ Hello there,
 I'm **Isman Firmansyah**, a (freelance) __[software engineer][github]__ and
 occasional [meetup][meetup] __[speaker][speakerdeck]__ from Indonesia.
 
-Web programming is my main expertise, but i __do__ have interests for other things:
+Software engineering is what I'm focus on right now, but i __do__ have interests for other things:
 
-* Network programming, distributed software, and DevOps movement
+* DevOps movement
+* Distributed system
 * Community work — as a [Python Indonesia][python-id] and [Docker Jakarta][docker-id] co-organizer
 
 If we haven't met in person, drop me a line or two on [Twitter][twitter] or [LinkedIn][linkedin].
