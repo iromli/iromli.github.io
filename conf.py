@@ -71,12 +71,10 @@ DEPLOYMENT = {
     "default": " && ".join(commands),
 }
 
-# TEMPORARY HACKS!
-#
-from acrylamid.assets import System
+import acrylamid.assets
 
 
-class SASSC(System):
+class SASSC(acrylamid.assets.System):
     ext, target = '.scss', '.css'
     cmd = ['sassc', ]
     uses = r'^@import ["\'](?P<file>.+?\.scss)["\'];'
@@ -87,8 +85,6 @@ class SASSC(System):
             if f == "css/main.scss"
         ]
 
-
-import acrylamid.assets
 acrylamid.assets.SASSC = SASSC
 
 STATIC_FILTER = ["SASSC"]
