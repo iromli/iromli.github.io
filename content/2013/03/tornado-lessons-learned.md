@@ -1,6 +1,7 @@
 ---
 title: Tornado, Lessons Learned
 date: 04.03.2013, 04:19
+author_image: iromli.jpeg
 ---
 
 ## Back In The Days

@@ -1,6 +1,7 @@
 ---
 title: Introducing Genma
 date: 14.07.2013, 00:19
+author_image: iromli.jpeg
 ---
 
 ## I Need Isolated Workspace

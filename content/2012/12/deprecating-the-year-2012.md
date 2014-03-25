@@ -1,6 +1,7 @@
 ---
 title: Deprecating The Year 2012
 date: 31.12.2012
+author_image: iromli.jpeg
 ---
 
 ## From 2012, With Love

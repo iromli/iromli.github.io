@@ -1,6 +1,7 @@
 ---
 title: Welcoming Acrylamid
 date: 23.01.2013, 22:36
+author_image: iromli.jpeg
 ---
 
 ## A Short Story: An Introduction

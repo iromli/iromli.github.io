@@ -1,0 +1,30 @@
+<footer class="site-footer">
+    <div class="container">
+        &copy; {{ conf.copyright_year }}
+
+        {% if conf.bottom_nav %}
+            <nav>
+            {% for nav in conf.bottom_nav %}
+                <a href="{{ env.path ~ nav[1] }}">{{ nav[0] }}</a> {% if loop.index < loop._length %}&middot;{% endif %}
+            {% endfor %}
+            </nav>
+        {% else %}
+            <a href="{{ env.path ~ '/' }}">Home</a>
+        {% endif %}
+
+        <nav class="social">
+            {% if conf.twitter %}
+            <a href="https://twitter.com/{{ conf.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            {% endif %}
+            {% if conf.feed_url %}
+                {% set feed_type = "Atom" if conf.views[conf.feed_url]["views"][0] == "atom" else "RSS" %}
+                <a href="{{ env.path ~ conf.feed_url }}" title="{{ feed_type }} Feed">
+                    <i class="icon icon-rss black"></i>
+                </a>
+            {% endif %}
+        </nav>
+        {% if conf.legal %}
+            <p>{{ conf.legal }}</p>
+        {% endif %}
+    </div>
+</footer>

@@ -1,6 +1,7 @@
 ---
 title: Thank You, Beautiplan
 date: 14.02.2014, 08:43
+author_image: iromli.jpeg
 ---
 
 ## A Farewell Note

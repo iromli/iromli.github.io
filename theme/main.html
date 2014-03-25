@@ -2,90 +2,56 @@
 
 {% block title %}
     {%- if entry is defined -%}
-        {{ entry.title }}
+      {{ entry.title }}
     {%- else -%}
-        {{ conf.sitename }}
-    {%- endif -%}
-{% endblock %}
-
-{% block head %}
-    {{- super() }}
-    {%- if entry is defined %}
-    <meta name="description" content="{{ entry.description | e }}" />
-    <meta name="keywords" content="{{ entry.tags | join(', ') }}" />
+      {{ conf.sitename }}
     {%- endif -%}
 {% endblock %}
 
 {% block content %}
-    {% if entry is defined %}
-    <div class="posts">
-        <section class="post">
-            <header class="post-header">
-                <h2 class="post-title">{{ entry.title }}</h2>
-                <div class="content-subhead">
-                    <em>{{ entry.date.strftime("%A, %B %d, %Y") }}</em>
-                    {%- if entry.tags -%}
-                    &nbsp;&raquo;&nbsp;<span>
-                        {% for tag in entry.tags | tagify -%}
-                            <a href="{{ env.path + tag.href }}" rel="tag">{{ tag.title }}</a>
-                            {%- if loop.revindex > 1 -%}&nbsp;{% endif %}
-                        {% endfor %}
-                        </span>
+    {% if conf.banner %}
+        <div class="blog-cover" style="background-image:url({{ env.path ~ '/img/' ~ conf.banner }});">
+            <section>
+                <div>
+                    <h1>{{ conf.sitename }}</h1>
+                    {% if conf.subtitle %}<h3>{{ conf.subtitle }}</h3>{% endif %}
+                    {% if conf.twitter %}
+                    <a href="https://twitter.com/{{ conf.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+                    {% endif %}
+                    {% if conf.feed_url %}
+                        {% set feed_type = "Atom" if conf.views[conf.feed_url]["views"][0] == "atom" else "RSS" %}
+                        <a href="{{ env.path ~ conf.feed_url }}" title="{{ feed_type }} Feed">
+                            <i class="icon icon-rss"></i>
+                        </a>
                     {% endif %}
                 </div>
-            </header>
-
-            <div class="post-description">
-                <p>{{ entry.content }}</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="neighbors">
-        {% if env.prev is not none %}
-        <div class="pull-left">
-            <span>&larr;</span>&nbsp;<a href="{{ env.path ~ env.prev }}">prev</a>
+            </section>
         </div>
+    {% endif %}
+
+    <article class="container">
+        {% for entry in env.entrylist %}
+            <section class="index">
+                <div>
+                    <h2 class="title"><a href="{{ env.path ~ entry.permalink }}" rel="prefetch">{{ entry.title }}</a></h2>
+                    {{ entry.content }}
+                    <div class="meta">
+                        Written by <address> <span rel="author" title="{{ entry.author }}">{{ entry.author }}</span> &mdash; <time pubdate datetime="{{ entry.date.strftime('%Y-%d-%B') }}" title="{{ entry.date.strftime('%B %d, %Y') }}">{{ entry.date.strftime("%B %d, %Y") }}</time></address>
+                    </div>
+                </div>
+                <hr>
+            </section>
+        {% endfor %}
+
+        {% if env.next or env.prev %}
+            <section class="pagination" style="text-align:center;">
+            {% if env.next is not none %}
+                <a href="{{ env.path ~ env.next }}" class="btn btn-outline">&larr; Newer</a>
+            {%- endif  %}
+            {% if env.prev is not none %}
+                <a href="{{ env.path ~ env.prev }}" class="btn btn-outline">Older &rarr;</a>
+            {% endif %}
+            </section>
         {% endif %}
-        {% if env.next is not none %}
-        <div class="pull-right">
-            <a href="{{ env.path ~ env.next }}">next</a>&nbsp;<span>&rarr;</span>
-        </div>
-        {% endif  %}
-        <div style="clear:both;"></div>
-    </div>
-    {% endif %}
-{% endblock %}
-
-{% block footer %}
-    {{ super() }}
-    {% if conf.disqus_shortname %}
-        <div id="disqus_thread"></div>
-    {% endif %}
-{% endblock %}
-
-{% block extra_js %}
-    <script type="text/javascript">
-        if (window.location.hostname != 'localhost') {
-            var dq_container = document.getElementById('disqus_thread');
-
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            // required: replace example with your forum shortname
-            var disqus_shortname = "{{ conf.disqus_shortname  }}";
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-
-            dq_container.style['padding-top'] = '40px';
-            dq_container.style['margin-bottom'] = '40px';
-            dq_container.style['border-top'] = 'dashed 1px #DDD';
-        }
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </article>
 {% endblock %}

@@ -1,68 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-    {% block head -%}
-        <title>{% block title %}{% endblock %}</title>
-        <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="{{ env.path + '/css/pure-min.css'}}" rel="stylesheet" type="text/css">
-        <link href="{{ env.path + '/css/style.css'}}" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="{{ env.path + '/img/favicon.ico'}}" type="image/x-icon">
-        {% if conf.author %}<meta name="author" content="{{ conf.author }}">{% endif %}
-        {% if conf.description %}<meta name="description" content="{{ conf.description }}">{% endif %}
-    {%- endblock %}
-</head>
-<body>
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            <header class="header">
-                <hgroup>
-                    <h1 class="brand-title">{{ conf.sitename|lower }}</h1>
-                </hgroup>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="pure-button" href="{{ env.path + '/' }}">Archives</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="pure-button" href="{{ env.path + '/atom.xml' }}">Feeds</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <div class="pure-u-1">
-            <div class="content">
-                {% block content %}{% endblock %}
-                {% block footer %}{% endblock %}
-                <div class="footer">
-                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
-                        <p id="legal">{{ conf.sitename }} &copy; 2013</p>
-                        <ul>
-                            <li>
-                                <a href="{{ env.path + '/about/' }}">Who Am I?</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iromli/groovematic" target="_blank">Use The Source, Luke!</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% block extra_js %}{% endblock %}
-    <script>
-        if (window.location.hostname != 'localhost') {
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-34241156-1', 'groovematic.com');
-            ga('send', 'pageview');
-        }
-    </script>
-</body>
+        <title>{% block title %}{% endblock %}</title>
+        {% if conf.google_font %}
+            <link href="https://fonts.googleapis.com/css?family={{ conf.google_font }}" rel="stylesheet" type="text/css">
+        {% endif %}
+        <link rel="shortcut icon" href="{{ env.path ~ '/favicon.ico' }}" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="{{ env.path ~ '/img/logo.png'}}"/>
+        {% if conf.feed_url %}
+            {% set feed_type = conf.views[conf.feed_url]["views"][0] %}
+            <link href="{{ conf.www_root ~ conf.feed_url }}" rel="alternate" type="application/{{ feed_type }}+xml" title="{{ conf.sitename }}" />
+        {% endif %}
+        <link media="all" href="{{ env.path ~ '/css/main.css' }}" rel="stylesheet" />
+    {% endblock %}
+    </head>
+    <body>
+        {% include "_site_nav.html" %}
+        {%- block content -%}{%- endblock -%}
+        {% include "_site_footer.html" %}
+        {% block javascript %}
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        {% endblock %}
+    </body>
 </html>
