@@ -1,17 +1,25 @@
 ---
-title: Hi, Stranger
+title: About The Author
 permalink: /about/
 type: page
 ---
 
-I'm **Isman Firmansyah**, a __[software engineer][linkedin]__ and
+Hello there,
+
+I'm **Isman Firmansyah**, a (freelance) __[software engineer][github]__ and
 occasional [meetup][meetup] __[speaker][speakerdeck]__ from Indonesia.
 
-If we haven't met in person, you can find me on [Twitter][twitter] and [GitHub][github].
-I do some freelance works, so in case you need my help, just drop a line or two to isman.firmansyah[at]gmail.com.
+Web programming is my main expertise, but i __do__ have interests for other things:
+
+* Network programming, distributed software, and DevOps movement
+* Community work — as a [Python Indonesia][python-id] and [Docker Jakarta][docker-id] co-organizer
+
+If we haven't met in person, drop me a line or two on [Twitter][twitter] or [LinkedIn][linkedin].
 
 [linkedin]: http://www.linkedin.com/in/iromli
 [meetup]: http://www.meetup.com/members/120268732/
 [speakerdeck]: https://speakerdeck.com/iromli
 [twitter]: https://twitter.com/iromli
 [github]: https://github.com/iromli
+[python-id]: http://www.python.or.id/
+[docker-id]: http://www.meetup.com/Docker-Jakarta/
