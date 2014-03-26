@@ -44,7 +44,7 @@ VIEWS = {
 
 
 THEME = "theme"
-THEME_IGNORE = ["_*", "*.xml"]
+THEME_IGNORE = ["_*", "*.xml", "main.html"]
 ENGINE = "acrylamid.templates.jinja2.Environment"
 DATE_FORMAT = "%d.%m.%Y, %H:%M"
 
@@ -82,7 +82,7 @@ class SASSC(acrylamid.assets.System):
     def filter(self, input, directory):
         return [
             f for f in super(SASSC, self).filter(input, directory)
-            if f == "css/main.scss"
+            if not f.split("/")[-1].startswith("_")
         ]
 
 acrylamid.assets.SASSC = SASSC
