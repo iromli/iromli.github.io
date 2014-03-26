@@ -114,5 +114,5 @@ SHARING_GPLUS = True
 COPYRIGHT_YEAR = 2014
 GOOGLE_FONT = "Droid+Sans:400,700"
 INTRO_LINK = ""
-LEGAL = "<em><a href='https://github.com/iromli/groovematic/'>Use the source, Luke!</a></em>"  # noqa
+LEGAL = "<em><a href='https://github.com/iromli/groovematic'>Use the source, Luke!</a></em>"  # noqa
 DISQUS_SHORTNAME = "groovematic"
