@@ -8,7 +8,7 @@
         {% if conf.google_font %}
             <link href="https://fonts.googleapis.com/css?family={{ conf.google_font }}" rel="stylesheet" type="text/css">
         {% endif %}
-        <link rel="shortcut icon" href="{{ env.path ~ '/favicon.ico' }}" type="image/x-icon" />
+        <link rel="shortcut icon" href="{{ env.path ~ '/img/favicon.ico' }}" type="image/x-icon" />
         <link rel="apple-touch-icon" href="{{ env.path ~ '/img/logo.png'}}"/>
         {% if conf.feed_url %}
             {% set feed_type = conf.views[conf.feed_url]["views"][0] %}
