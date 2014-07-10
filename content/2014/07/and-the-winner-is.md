@@ -27,7 +27,7 @@ We're human beings, we're embracing __HUMANITY__ above all.
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Now, hold your breath! We're going to the other side of this world,
-where people starts their days with real fights.
+where people start their days with real fights.
 
 ## The Far East Saga
 
