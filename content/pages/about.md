@@ -4,21 +4,21 @@ permalink: /about/
 type: page
 ---
 
-Hello there,
+![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="thumbnail"}
 
-I'm **Isman Firmansyah**, a __[software engineer][github]__ and
-occasional [meetup][meetup] __[speaker][speakerdeck]__ from Indonesia.
-Previously worked at a software house/agency and various local startups (SixReps, Beautiplan).
+__Isman Firmansyah__ is a _software developer_ lives in Indonesia.
+Previously [worked][linkedin] at web development agency
+and local startups — 8villages, SixReps, Beautiplan.
 
-Software engineering is what I'm focusing on right now,
-but i __do__ have interests for other things, e.g. history and culture of mankind.
-Also I'm quite active in tech community as a [Python Indonesia][python-id]
-and [Docker Jakarta][docker-id] co-organizer.
+He is quite active in tech community as [Python Indonesia][python-id]
+and [Docker Jakarta][docker-id] meetup co-organizer,
+[collaborating][github] on open source projects with other people,
+and occasionally giving [talks][speakerdeck] at local and regional events.
 
-If we haven't met in person, drop me a line or two on [Twitter][twitter] or [LinkedIn][linkedin].
+You can reach him on his [LinkedIn profile][linkedin] for work-related conversation;
+or just mention [@iromli][twitter] for anything else.
 
 [linkedin]: http://www.linkedin.com/in/iromli
-[meetup]: http://www.meetup.com/members/120268732/
 [speakerdeck]: https://speakerdeck.com/iromli
 [twitter]: https://twitter.com/iromli
 [github]: https://github.com/iromli

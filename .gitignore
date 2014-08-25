@@ -7,3 +7,4 @@ tmp
 !README.md
 .venv
 *.old
+theme/img/pages/.comments
