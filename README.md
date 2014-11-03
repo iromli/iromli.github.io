@@ -11,6 +11,8 @@ Python libraries:
 
     $ pip install -r requirements.txt
 
+SassC executable is available at https://github.com/sass/sassc.
+
 Hacking
 -------
 
