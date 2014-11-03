@@ -10,7 +10,7 @@ __Estadio Mineirao, Belo Horizonte__ — 15720.38 km/9768.19 miles from Indonesi
 Germany knocked down Brazil with stunning scoresheet, 7 - 1.
 An embarassing moment for Brazil as a 5 times world champion and World Cup host.
 
-![Distance between Jakarta and Brazil](/img/2014/07/jkt-bra.png){: class="thumbnail"}
+![Distance between Jakarta and Brazil](/img/2014/07/jkt-bra.png){: class="img-thumbnail"}
 
 As a football fan, I really enjoy how Germany played and won the game.
 But that's not what makes me happy.
@@ -34,7 +34,7 @@ where people start their days with real fights.
 __Gaza, Palestine__ — 8735.73 km/5428.13 miles from Indonesia — was under attack (again) by Israelis
 with their "Operation Protective Edge".
 
-![Distance between Jakarta and Gaza](/img/2014/07/jkt-gaza.png){: class="thumbnail"}
+![Distance between Jakarta and Gaza](/img/2014/07/jkt-gaza.png){: class="img-thumbnail"}
 
 According to various sources (yes, I read western and eastern media as well),
 the conflict escalated after 3 Israel kids were [kidnapped and murdered by Hamas][1].

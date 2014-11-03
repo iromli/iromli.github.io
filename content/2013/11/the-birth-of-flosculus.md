@@ -8,7 +8,7 @@ author_image: iromli.jpeg
 
 Few days ago, i tweeted this:
 
-![CPU-blown](/img/2013/11/cpu-blown.png){: class="thumbnail"}
+![CPU-blown](/img/2013/11/cpu-blown.png){: class="img-thumbnail"}
 
 If you notice, the top 2 commands show a huge difference between
 CPU usage consumed by Ruby and Python programs — the former is a
@@ -44,7 +44,7 @@ As you might have known, i know nothing about Ruby nowadays — my Ruby days wer
 Please don't get me wrong, Ruby is a sexy programming language.
 But you know what, not all people able to deal with the _hottie_ for a long-term relationship.
 
-![nosebleed](/img/2013/11/nosebleed-anime.jpg){: class="thumbnail"}
+![nosebleed](/img/2013/11/nosebleed-anime.jpg){: class="img-thumbnail"}
 
 ## Second Attempt: Keep Calm & Move On
 
@@ -65,7 +65,7 @@ So i sat down and read the internal documentation on how [Beautiplan][beautiplan
 infrastructure are made of — especially the logging files management section.
 Anyway, here's the schema with a little detail for each component:
 
-![schema](/img/2013/11/schema.png){: class="thumbnail"}
+![schema](/img/2013/11/schema.png){: class="img-thumbnail"}
 
 1.  #### forwarder
 
@@ -118,7 +118,7 @@ But it's already running in production though.
 Yes, i know some of you might said, _"Dont reinvent the wheel"_.
 But what if the wheels aren't exactly what i need?
 
-![bicycle](/img/2013/11/bicycle.jpg){: class="thumbnail"}
+![bicycle](/img/2013/11/bicycle.jpg){: class="img-thumbnail"}
 
 In the end, Flosculus is my attempt to create something like Beaver or Fluentd `in_tail` plugin.
 I wanna see it grows (or likely dies prematurely). The future is far beyond.

@@ -4,7 +4,7 @@ permalink: /about/
 type: page
 ---
 
-![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="thumbnail"}
+![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="img-thumbnail"}
 
 __Isman Firmansyah__ is a _software developer_ lives in Indonesia.
 Previously [worked][linkedin] at web development agency

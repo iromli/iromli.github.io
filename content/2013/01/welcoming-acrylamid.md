@@ -18,11 +18,11 @@ Then the problem came up. Whenever i need to customize the library, i cringed fo
 During my journey to find a nanoc-like Python-based static website generator, i rant about it on Twitter.
 Surprisingly, the core developer of nanoc gave his reaction.
 
-![me and dennis having a talk](/img/2013/01/nanoc-convo.png){: class="thumbnail"}
+![me and dennis having a talk](/img/2013/01/nanoc-convo.png){: class="img-thumbnail"}
 
 As you could see, i was using [Mynth](https://github.com/Anomareh/mynt) before i found Acrylamid. Anyway, here's my reaction after reading Acrylamid's `README.rst`:
 
-![first impression](/img/2013/01/i-found-acrylamid.png){: class="thumbnail"}
+![first impression](/img/2013/01/i-found-acrylamid.png){: class="img-thumbnail"}
 
 Well, that's true. Acrylamid is promising. Moreover, it's built on top of Python, i feel confident to use it whatever i want. I also made [my first contribution](https://github.com/posativ/acrylamid/pull/97) recently.
 

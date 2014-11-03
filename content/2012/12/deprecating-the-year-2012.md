@@ -22,16 +22,16 @@ From left to right:
 
 ### People I've Met
 
-![Python ID](/img/2012/12/minipycon-2012.jpg){: class="thumbnail"}
+![Python ID](/img/2012/12/minipycon-2012.jpg){: class="img-thumbnail"}
 
 Python Indonesia meetup at Detik, and it was fun!! We share knowledge, insight, almost anything about Python and the community itself.
 
-![blaast](/img/2012/12/blaast-sixreps.jpg){: class="thumbnail"}
+![blaast](/img/2012/12/blaast-sixreps.jpg){: class="img-thumbnail"}
 
 [Blaast](http://www.blaast.com/) Indonesia representatives visited SixReps HQ.
 They gave a talk about their platform, cloud mobile, and a little bit of NodeJS.
 
-![hackathon](/img/2012/12/startup-asia.jpg){: class="thumbnail"}
+![hackathon](/img/2012/12/startup-asia.jpg){: class="img-thumbnail"}
 
 My first hackathon event -- 48 hours, hundreds of developers, cold weather, lovely city Bandung.
 

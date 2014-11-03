@@ -19,7 +19,7 @@ It's a tough decision, but I have to move on as my interests have been shifted a
 
 Thanks to everyone at Beautiplan. Lovely people, joyful moments.
 
-![In my heart](/img/2014/02/in-my-heart.png){: class="thumbnail"}
+![In my heart](/img/2014/02/in-my-heart.png){: class="img-thumbnail"}
 
 [beautiplan]: http://www.beautiplan.com/
 [lite]: http://lite.beautiplan.com/
