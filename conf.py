@@ -99,7 +99,7 @@ PRODUCT_LINK = (
 TOP_NAV = (
     ("Blog", "/"),
     ("Projects", "https://github.com/iromli"),
-    ("Talks", "https://speakerdeck.com/iromli"),
+    ("Talks", "/talks/"),
     ("About", "/about/"),
 )
 BOTTOM_NAV = TOP_NAV
