@@ -13,9 +13,10 @@ Previously worked at web development agency and local startups — 8villages, Be
 
 I love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local events.
 
-You can reach me on [LinkedIn][linkedin] or [Twitter][twitter].
+You can reach me via [email][], [LinkedIn][linkedin], or [Twitter][twitter].
 
 [linkedin]: http://www.linkedin.com/in/iromli
 [speakerdeck]: https://speakerdeck.com/iromli
 [twitter]: https://twitter.com/iromli
 [github]: https://github.com/iromli
+[email]: mailto:isman.firmansyah@gmail.com
