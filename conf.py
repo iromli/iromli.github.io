@@ -98,7 +98,7 @@ PRODUCT_LINK = (
 
 TOP_NAV = (
     ("Blog", "/"),
-    ("Projects", "https://github.com/iromli"),
+    ("Projects", "/projects/"),
     ("Talks", "/talks/"),
     ("About", "/about/"),
 )
@@ -111,7 +111,7 @@ SHARING = True
 SHARING_TWITTER = True
 SHARING_TWITTER_VIA = ""
 SHARING_GPLUS = True
-COPYRIGHT_YEAR = 2014
+COPYRIGHT_YEAR = 2015
 GOOGLE_FONT = "Droid+Sans:400,700"
 INTRO_LINK = ""
 LEGAL = "<em><a href='https://github.com/iromli/groovematic'>Use the source, Luke!</a></em>"  # noqa
