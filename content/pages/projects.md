@@ -22,4 +22,4 @@ A few of my pet projects, either [open sourced](https://github.com/iromli) or pr
 ### Web Apps
 
 * [jazzera](https://jazzera.herokuapp.com/) — a jazz music discovery service.
-* [lowqer](https://lowqer.herokuapp.com/) — a job board aimed for Python developers (and companies?) in Indonesia.
+* [lowqer](https://lowqer.herokuapp.com/) — a simple job board.
