@@ -6,6 +6,8 @@ type: page
 
 ## Projects
 
+![Code](/img/pages/code.png){: class="img-thumbnail"}
+
 A few of my pet projects, either [open sourced](https://github.com/iromli) or proprietary:
 
 ### Libraries
