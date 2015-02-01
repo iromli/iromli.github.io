@@ -6,8 +6,6 @@ type: page
 
 ## Talks
 
-![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="img-thumbnail"}
-
 A few of my [talks][speakerdeck] presented at various local and regional events:
 
 * [Python Version Management with pyenv][pyenv-talk] @ Python Indonesia meetup on April 26, 2014.

@@ -4,6 +4,8 @@ permalink: /about/
 type: page
 ---
 
+![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="img-thumbnail"}
+
 Hello there,
 
 I'm __Isman Firmansyah__, a freelance _software developer_ lives in Indonesia.
