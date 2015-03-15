@@ -51,9 +51,6 @@ DATE_FORMAT = "%d.%m.%Y, %H:%M"
 STATIC_IGNORE = ["empty", "README.md"]
 CONTENT_EXTENSION = ".md"
 
-# DISQUS_SHORTNAME = "groovematic"
-DISQUS_SHORTNAME = ""
-
 deploy_msg = "automated deployment"
 
 commands = (
@@ -116,4 +113,5 @@ COPYRIGHT_YEAR = 2015
 GOOGLE_FONT = "Droid+Sans:400,700"
 INTRO_LINK = ""
 LEGAL = "<em><a href='https://github.com/iromli/groovematic'>Use the source, Luke!</a></em>"  # noqa
-DISQUS_SHORTNAME = "groovematic"
+# DISQUS_SHORTNAME = "groovematic"
+DISQUS_SHORTNAME = ""
