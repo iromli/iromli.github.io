@@ -51,7 +51,8 @@ DATE_FORMAT = "%d.%m.%Y, %H:%M"
 STATIC_IGNORE = ["empty", "README.md"]
 CONTENT_EXTENSION = ".md"
 
-DISQUS_SHORTNAME = "groovematic"
+# DISQUS_SHORTNAME = "groovematic"
+DISQUS_SHORTNAME = ""
 
 deploy_msg = "automated deployment"
 
