@@ -11,7 +11,7 @@ Python libraries:
 
     $ pip install -r requirements.txt
 
-SassC executable is available at https://github.com/sass/sassc.
+`sassc` executable is available at https://github.com/sass/sassc (requires https://github.com/sass/libsass).
 
 Hacking
 -------
@@ -23,8 +23,3 @@ Compile and serve the content at `http://localhost:8000/`:
 Deploy:
 
     $ acrylamid deploy
-
-Todo
-----
-
-* <del>Robust deployment</del>
