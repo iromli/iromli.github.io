@@ -22,5 +22,4 @@ A few of my pet projects, either [open sourced](https://github.com/iromli) or pr
 
 ### Web Apps
 
-* [jazzera](http://jazzera.herokuapp.com/) — jazz music catalog.
 * [lowqer](http://lowqer.herokuapp.com/) — a simple job board.
