@@ -12,7 +12,7 @@ I'm __Isman Firmansyah__, a freelance _software developer_ lives in Indonesia.
 I love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local and/or regional events.
 
 Over the years, I've worked with various companies such as [8villages][], Beautiplan, and SixReps.
-Currently I'm working with [Gluu Inc.][gluu] to develop deployment tools for clustered servers
+Currently I'm working with [Gluu][gluu] to develop deployment tools for clustered servers
 on top of `docker` technology and its ecosystem.
 
 Oh by the way, you can reach me via [email][], [LinkedIn][linkedin], or [Twitter][twitter].
