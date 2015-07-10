@@ -9,7 +9,9 @@ type: page
 Hello there,
 
 I'm __Isman Firmansyah__, a freelance _software developer_ lives in Indonesia.
-I love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local and/or regional events.
+
+I have experience developing social networks, messaging platforms, DevOps tools, and general web apps.
+I also love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local and/or regional events.
 
 Over the years, I've worked with various companies such as [8villages][], Beautiplan, and SixReps.
 Currently I'm working with [Gluu][gluu] to develop deployment tools for clustered servers
