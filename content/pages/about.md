@@ -8,7 +8,7 @@ type: page
 
 Hello there,
 
-I'm __Isman Firmansyah__, a freelance _software developer_ lives in Indonesia.
+I'm __Isman Firmansyah__, a freelance _software developer_ from Indonesia (UTC+7).
 
 I have experience developing social networks, messaging platforms, DevOps tools, and general web apps.
 I also love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local and/or regional events.
