@@ -6,18 +6,17 @@ type: page
 
 ![PyCon SG 2013](/img/pages/pycon-sg.jpg){: class="img-thumbnail"}
 
-Hello there,
+Halo,
 
-I'm __Isman Firmansyah__, a freelance _software developer_ from Indonesia (UTC+7).
+Saya __Isman Firmansyah__, software developer dari Indonesia (UTC+7).
 
-I have experience developing social networks, messaging platforms, DevOps tools, and general web apps.
-I also love collaborating on [open source projects][github] and occasionally giving [talks][speakerdeck] at local and/or regional events.
+Saya memiliki pengalaman dalam rekayasa perangkat lunak untuk social network, platform messaging, DevOps, dan aplikasi web.
+Saya juga senang berkolaborasi di [proyek open source][github], dan kadang memberikan [presentasi][speakerdeck] di acara lokal dan regional.
 
-Over the years, I've worked with various companies such as [8villages][], Beautiplan, and SixReps.
-Currently I'm working with [Gluu][gluu] to develop deployment tools for clustered servers
-on top of `docker` technology and its ecosystem.
+Selama beberapa tahun terakhir, saya bekerja untuk beberapa perusahaan seperti [8villages][], Beautiplan, dan SixReps.
+Saat ini saya bekerja di [Gluu][gluu] untuk merancang dan membuat deployment tool untuk clustered servers.
 
-Oh by the way, you can reach me via [email][], [LinkedIn][linkedin], or [Twitter][twitter].
+Kontak: [email][], [LinkedIn][linkedin], atau [Twitter][twitter].
 
 [linkedin]: http://www.linkedin.com/in/iromli
 [speakerdeck]: https://speakerdeck.com/iromli
