@@ -16,12 +16,11 @@ Saya juga senang berkolaborasi di [proyek open source][github], dan kadang membe
 Selama beberapa tahun terakhir, saya bekerja untuk beberapa perusahaan seperti [8villages][], Beautiplan, dan SixReps.
 Saat ini saya bekerja di [Gluu][gluu] untuk merancang dan membuat deployment tool untuk clustered servers.
 
-Kontak: [email][], [LinkedIn][linkedin], atau [Twitter][twitter].
+Kontak: [LinkedIn][linkedin] atau [Twitter][twitter].
 
 [linkedin]: http://www.linkedin.com/in/iromli
 [speakerdeck]: https://speakerdeck.com/iromli
 [twitter]: https://twitter.com/iromli
 [github]: https://github.com/iromli
-[email]: mailto:isman.firmansyah@gmail.com
 [8villages]: http://8villages.com/
 [gluu]: http://gluu.org/
