@@ -3,7 +3,7 @@
 # See http://posativ.org/acrylamid/conf.py.html
 
 SITENAME = "Groovematic"
-WWW_ROOT = "http://groovematic.com/"
+WWW_ROOT = "http://iromli.github.io/"
 
 AUTHOR = "Isman Firmansyah"
 EMAIL = "isman.firmansyah@gmail.com"
@@ -56,12 +56,12 @@ deploy_msg = "automated deployment"
 commands = (
     "rm -rf output",
     "acrylamid compile",
-    "git checkout gh-pages",
+    "git checkout master",
     "rsync -rvc --delete-after --exclude=CNAME --exclude=.git* output/ .",
     "git add . -A",
     "git commit -m '%s'" % deploy_msg,
     "git push origin gh-pages",
-    "git checkout master",
+    "git checkout src",
 )
 
 
@@ -69,7 +69,7 @@ DEPLOYMENT = {
     "default": " && ".join(commands),
 }
 
-import acrylamid.assets
+import acrylamid.assets  # noqa
 
 
 class SASSC(acrylamid.assets.System):
@@ -82,6 +82,7 @@ class SASSC(acrylamid.assets.System):
             f for f in super(SASSC, self).filter(input, directory)
             if not f.split("/")[-1].startswith("_")
         ]
+
 
 acrylamid.assets.SASSC = SASSC
 
