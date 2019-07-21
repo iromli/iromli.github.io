@@ -16,7 +16,7 @@ Saya juga senang berkolaborasi di [proyek open source][github], dan kadang membe
 Selama beberapa tahun terakhir, saya bekerja untuk beberapa perusahaan seperti [8villages][], Beautiplan, dan SixReps.
 Saat ini saya bekerja di [Gluu][gluu] untuk merancang dan membuat deployment tool untuk clustered servers.
 
-Kontak: [LinkedIn][linkedin] atau [Twitter][twitter].
+Kontak: [LinkedIn][linkedin].
 
 [linkedin]: http://www.linkedin.com/in/iromli
 [speakerdeck]: https://speakerdeck.com/iromli
