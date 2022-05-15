@@ -26,6 +26,8 @@
     {{ head::rss() }}
 
     {{ head::mathjax() }}
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -65,7 +67,10 @@
 	      <div class="hero">
           <img src="{{ get_url(path=config.extra.image) }}" />
 	        <p>{{ config.extra.caption }}</p>
-            <div id="promo">Hello, there! I'm <b>Isman Firmansyah</b>, </br>a fulltime <a href="https://www.linkedin.com/in/iromli">software engineer</a>, opensource <a href="https://github.com/iromli">enthusiast</a>, occasional <a href="https://speakerdeck.com/iromli">tech speaker</a>, and <a href="{{ config.base_url ~ "/about/" }}">many more</a>.
+            <div id="promo">Hello, there! I'm <b>Isman Firmansyah</b>.
+                </br>A fulltime <a href="https://www.linkedin.com/in/iromli">software engineer</a> and opensource <a href="https://github.com/iromli">enthusiast</a>.
+                </br>Occasionally giving <a href="https://speakerdeck.com/iromli">presentation</a> and writing <a href="{{ config.base_url ~ "/blog/" }}">blog posts</a>.
+                </br> I do <a href="{{ config.base_url ~ "/about/" }}">other things</a> too, by the way.
             </div>
 	      </div>
         {% endblock content %}
@@ -82,4 +87,6 @@
 
   {{ scripts::disqus() }}
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </html>
