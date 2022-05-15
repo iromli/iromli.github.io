@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block pagetitle %}
+    {{ head::titlesite(page_title = page.title) }}
+{% endblock pagetitle %}
+
+{% block masthead %}
+{{ macros::masthead(current_url=page.permalink) }}
+{% endblock masthead %}
+
+{% block navigation_list %}
+   {{ sidebar::nav(navlist = sidebar_nav.nav, page_permalink = page.permalink) }}
+{% endblock navigation_list %}
+
+{% block content %}
+	      <div class="page">
+          {% block page_content %}
+	        <h1 class="page-title">{{ page.title }}</h1>
+	        {{ page.content | safe }}
+          {% endblock page_content %}
+	      </div>
+{% endblock content %}

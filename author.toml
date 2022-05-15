@@ -1,0 +1,22 @@
+###
+# About/contact for the site author
+#
+# name of the author of the site
+name = "Isman Firmansyah"
+# description to display in the sidebar
+description = "A musafir on his undercover mission."
+
+# the profile image of the author to display in the sidebar
+gravatar = "3c2c7eb4182d059c8011f2f39e28e8e6" # md5 hash of your email address # sidebar.html
+
+# contact links to reach the author
+#  - `name` is the font-awesome char name
+#  - `path` is the link to follow
+contact = [
+  { name = "linkedin", path = "https://www.linkedin.com/in/iromli" },
+  { name = "github", path = "https://github.com/iromli" },
+  # { name = "facebook", path = "https://" },
+  { name = "twitter", path = "https://twitter.com/iromli" },
+  { name = "instagram", path = "https://instagram.com/iromli" },
+  # { name = "email", path = "" }
+]

@@ -1,10 +1,1 @@
-_build
-output
-.cache
-tmp
-*.pyc
-!empty
-!README.md
-.venv
-*.old
-theme/img/pages/.comments
+public

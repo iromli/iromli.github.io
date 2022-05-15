@@ -1,2 +1,0 @@
-Pygments==1.6
-acrylamid==0.7.1

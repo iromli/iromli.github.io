@@ -1,0 +1,35 @@
+###
+# Structure of the navigation menu in the sidebar
+#
+#  [[nav]] is required and defines the main voice menu
+#  [[nav.sub]] is optional and defines the second level voices
+#
+#  - `name` is the link's name displayed in the navigation menu
+#  - `path` is the site's relative link or the full external link associated to `name`
+#
+
+[[nav]]
+name = "Home"
+path = "/"
+
+[[nav]]
+name = "Blog"
+path = "/blog/"
+# haschild = true  # Blog is a section with submenu navigation items
+
+  # # sub-items of the Blog section
+  # [[nav.sub]]
+  # name = "Categories"
+  # path = "/categories/"
+
+  # [[nav.sub]]
+  # name = "Tags"
+  # path = "/tags/"
+
+[[nav]]
+name = "About"
+path = "/about/"
+
+# [[nav]]
+# name = "Github Project"
+# path = "https://github.com/svavs/codinfox-zola"
