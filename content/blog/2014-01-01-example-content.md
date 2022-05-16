@@ -1,6 +1,7 @@
 +++
 title = "Example content"
 template = "post.html"
+draft = true
 
 [taxonomies]
 tags = ["example"]
