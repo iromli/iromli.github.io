@@ -6,14 +6,13 @@
           <img src="http://www.gravatar.com/avatar/{{ gravatar }}?s=350" title="View on Gravatar" alt="View on Gravatar" />
         </a>
       </div>
-      <div class="sidebar-personal-info-section">
-        <p>{{ description | safe }}</p>
-      </div>
+      <!-- <div class="sidebar-personal-info-section"> -->
+      <!--   <p>{{ description | safe }}</p> -->
+      <!-- </div> -->
       {% if contacts %}
       {% set len = contacts | length %}
       {% set current_index = 0 %}
       <div class="sidebar-personal-info-section">
-        <p> Follow me: <br />
         {% for contact in contacts %}
         {%   set iconname = contact.name %}
         {%   if contact.name == 'email' %}
@@ -25,7 +24,6 @@
         {%   set current_index = current_index + 1 %}
         {%   if current_index != len %}|{% endif %}
         {% endfor %}
-        </p>
       </div>
       {% endif %}
     </div>
