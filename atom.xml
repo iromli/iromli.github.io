@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Isman Firmansyah</title>
+	<subtitle>A musafir on his undercover mission</subtitle>
+	<link href="http://iromli.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://iromli.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-05-17T00:00:00+00:00</updated>
+	<id>http://iromli.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Dockerfile COPY Caveat</title>
+		<published>2022-05-17T00:00:00+00:00</published>
+		<updated>2022-05-17T00:00:00+00:00</updated>
+		<link href="http://iromli.github.io/blog/dockerfile-copy-caveat/" type="text/html"/>
+		<id>http://iromli.github.io/blog/dockerfile-copy-caveat/</id>
+		<content type="html">&lt;p&gt;Imagine when you have snippet like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM node:14.19.1-alpine3.15 AS builder
+WORKDIR &amp;#x2F;app
+RUN npm run build
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That produces static files as seen below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;plaintext&quot; class=&quot;language-plaintext &quot;&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;&amp;#x2F;app&amp;#x2F;dist&amp;#x2F;
+├── app.bundle.js
+├── fonts
+│   └── nerd.ttf
+├── index.html
+└── static
+    └── main.css
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And then you want to copy the files into new stage:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM alpine:3.15.4 AS runner
+COPY --from=builder &amp;#x2F;app&amp;#x2F;dist&amp;#x2F;* &amp;#x2F;var&amp;#x2F;lib&amp;#x2F;nginx&amp;#x2F;html&amp;#x2F;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But you get a different file structures:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;plaintext&quot; class=&quot;language-plaintext &quot;&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;nginx&amp;#x2F;html&amp;#x2F;
+├── app.bundle.js
+├── index.html
+├── main.css
+└── nerd.ttf
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You may assume (at least I did) there&#x27;s something wrong with the build command. The &lt;code&gt;COPY&lt;&#x2F;code&gt; instruction doesn&#x27;t work like &lt;code&gt;cp -R &#x2F;src&#x2F;* &#x2F;dest&#x2F;&lt;&#x2F;code&gt; command does in unix shell.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;But why??&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;workaround&quot;&gt;Workaround&lt;&#x2F;h2&gt;
+&lt;p&gt;Luckily, a simple modification on the &lt;code&gt;COPY&lt;&#x2F;code&gt; instruction solved the issue.&lt;&#x2F;p&gt;
+&lt;p&gt;So, instead of&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;COPY --from=builder &amp;#x2F;app&amp;#x2F;dist&amp;#x2F;* &amp;#x2F;var&amp;#x2F;lib&amp;#x2F;nginx&amp;#x2F;html&amp;#x2F;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;do&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;COPY --from=builder &amp;#x2F;app&amp;#x2F;dist&amp;#x2F; &amp;#x2F;var&amp;#x2F;lib&amp;#x2F;nginx&amp;#x2F;html&amp;#x2F;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The structures are preserved correctly then.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;plaintext&quot; class=&quot;language-plaintext &quot;&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;nginx&amp;#x2F;html&amp;#x2F;
+├── app.bundle.js
+├── fonts
+│   └── nerd.ttf
+├── index.html
+└── static
+    └── main.css
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;moral-of-the-story&quot;&gt;Moral of the story&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&#x27;t expect the &lt;code&gt;COPY&lt;&#x2F;code&gt; instruction always do the same thing as &lt;code&gt;cp&lt;&#x2F;code&gt; command does.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>

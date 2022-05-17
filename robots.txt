@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://iromli.github.io/sitemap.xml
